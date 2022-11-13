@@ -20,8 +20,8 @@ src_vocab: data_english/run/phon/example.vocab.src
 tgt_vocab: data_english/run/phon/example.vocab.tgt
 
 # Train on a single GPU
-# world_size: 1
-# gpu_ranks: [0]
+world_size: 1
+gpu_ranks: [0]
 seed: 123
 encoder_type: brnn
 dropout: 0.3
@@ -48,5 +48,5 @@ log_file_level: 20
 
 # Where to save the checkpoints
 save_model: data_english/run/phon/model
-save_checkpoint_steps: 2440
+save_checkpoint_steps: 244
 train_steps: 24420

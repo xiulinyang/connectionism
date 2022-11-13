@@ -20,8 +20,8 @@ src_vocab: data_english/run/orth/example.vocab.src
 tgt_vocab: data_english/run/orth/example.vocab.tgt
 
 # Train on a single GPU
-# world_size: 1
-# gpu_ranks: [0]
+world_size: 1
+gpu_ranks: [0]
 seed: 123
 encoder_type: brnn
 dropout: 0.3
@@ -38,6 +38,7 @@ dec_rnn_size: 100
 feat_vec_size: 300
 beam_size: 12
 optim: adadelta
+valid_steps: 244
 verbose: True
 learning_rate_decay: 1.0
 tensorboard: True
