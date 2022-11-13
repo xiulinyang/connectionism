@@ -47,6 +47,6 @@ log_file: 'data_eng1/run/phon/log_file_exp1_irreg.txt'
 log_file_level: 20
 # Where to save the checkpoints
 save_model: data_eng1/run/phon/model
-save_checkpoint_steps: 16155
+save_checkpoint_steps: 1616
 train_steps: 16155
 # valid_steps: 404
