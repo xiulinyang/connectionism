@@ -10,11 +10,11 @@ overwrite: False
 # Corpus opts:
 data:
     corpus_1:
-        path_src: data_eng1/phon/src_train.txt
-        path_tgt: data_eng1/phon/tgt_train.txt
+        path_src: data_eng1/run/phon/src_train.txt
+        path_tgt: data_eng1/run/phon/tgt_train.txt
     valid:
-        path_src: data_eng1/phon/src_train_irreg.txt
-        path_tgt: data_eng1/phon/tgt_train_irreg.txt
+        path_src: data_eng1/run/phon/src_train_irreg.txt
+        path_tgt: data_eng1/run/phon/tgt_train_irreg.txt
 
 # Vocabulary files that were just created
 src_vocab: data_eng1/run/phon/example.vocab.src
@@ -43,7 +43,7 @@ verbose: True
 tensorboard: True
 tensorboard_log_dir: logs
 report_every: 161
-log_file: 'data_eng1/phon/log_file_exp1_irreg.txt'
+log_file: 'data_eng1/run/phon/log_file_exp1_irreg.txt'
 log_file_level: 20
 # Where to save the checkpoints
 save_model: data_eng1/run/phon/model
