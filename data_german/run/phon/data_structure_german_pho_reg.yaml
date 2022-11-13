@@ -21,8 +21,8 @@ src_vocab: data_german/run/phon/example.vocab.src
 tgt_vocab: data_german/run/phon/example.vocab.tgt
 
 # Train on a single GPU
-# world_size: 1
-# gpu_ranks: [0]
+world_size: 1
+gpu_ranks: [0]
 seed: 123
 encoder_type: brnn
 dropout: 0.3
@@ -40,6 +40,7 @@ feat_vec_size: 300
 beam_size: 12
 optim: adadelta
 verbose: True
+valid_steps: 243
 learning_rate_decay: 1.0
 tensorboard: True
 tensorboard_log_dir: logs
