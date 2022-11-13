@@ -37,6 +37,7 @@ enc_rnn_size: 100
 dec_rnn_size: 100
 feat_vec_size: 300
 beam_size: 12
+valid_steps: 244
 optim: adadelta
 verbose: True
 learning_rate_decay: 1.0
@@ -48,5 +49,5 @@ log_file_level: 20
 
 # Where to save the checkpoints
 save_model: data_dutch/run/phon/model
-save_checkpoint_steps: 2440
+save_checkpoint_steps: 24420
 train_steps: 24420

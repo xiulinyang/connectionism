@@ -33,6 +33,7 @@ train_steps: 24420
 enc_layers: 2
 feat_merge: concat
 dec_layers: 2
+valid_steps: 244
 enc_rnn_size: 100
 dec_rnn_size: 100
 feat_vec_size: 300

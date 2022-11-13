@@ -1,0 +1,576 @@
+[2022-11-13 00:29:09,349 INFO] Missing transforms field for corpus_1 data, set to default: [].
+[2022-11-13 00:29:09,349 WARNING] Corpus corpus_1's weight should be given. We default it to 1 for you.
+[2022-11-13 00:29:09,349 INFO] Missing transforms field for valid data, set to default: [].
+[2022-11-13 00:29:09,349 INFO] Parsed 2 corpora from -data.
+[2022-11-13 00:29:09,349 INFO] Get special vocabs from Transforms: {'src': set(), 'tgt': set()}.
+[2022-11-13 00:29:09,350 INFO] Building model...
+[2022-11-13 00:29:09,556 INFO] NMTModel(
+  (encoder): RNNEncoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(48, 500, padding_idx=1)
+        )
+      )
+    )
+    (rnn): LSTM(500, 250, num_layers=2, batch_first=True, dropout=0.3, bidirectional=True)
+  )
+  (decoder): InputFeedRNNDecoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(48, 500, padding_idx=1)
+        )
+      )
+    )
+    (dropout): Dropout(p=0.3, inplace=False)
+    (rnn): StackedLSTM(
+      (dropout): Dropout(p=0.3, inplace=False)
+      (layers): ModuleList(
+        (0): LSTMCell(1000, 500)
+        (1): LSTMCell(500, 500)
+      )
+    )
+    (attn): GlobalAttention(
+      (linear_in): Linear(in_features=500, out_features=500, bias=False)
+      (linear_out): Linear(in_features=1000, out_features=500, bias=False)
+    )
+  )
+  (generator): Sequential(
+    (0): Linear(in_features=500, out_features=48, bias=True)
+    (1): Cast()
+    (2): LogSoftmax(dim=-1)
+  )
+)
+[2022-11-13 00:29:09,559 INFO] encoder: 3032000
+[2022-11-13 00:29:09,559 INFO] decoder: 5806048
+[2022-11-13 00:29:09,559 INFO] * number of parameters: 8838048
+[2022-11-13 00:29:09,559 INFO]  * src vocab size = 48
+[2022-11-13 00:29:09,559 INFO]  * tgt vocab size = 48
+[2022-11-13 00:29:09,838 INFO] Starting training on CPU, could be very slow
+[2022-11-13 00:29:09,838 INFO] Start training loop and validate every 10000 steps...
+[2022-11-13 00:29:09,876 INFO] Weighted corpora loaded so far:
+			* corpus_1: 1
+[2022-11-13 00:29:09,876 INFO] Weighted corpora loaded so far:
+			* corpus_1: 1
+[2022-11-13 00:29:09,894 INFO] Weighted corpora loaded so far:
+			* corpus_1: 2
+[2022-11-13 00:29:09,897 INFO] Weighted corpora loaded so far:
+			* corpus_1: 2
+[2022-11-13 00:29:09,913 INFO] Weighted corpora loaded so far:
+			* corpus_1: 3
+[2022-11-13 00:29:09,914 INFO] Weighted corpora loaded so far:
+			* corpus_1: 3
+[2022-11-13 00:29:10,022 INFO] Weighted corpora loaded so far:
+			* corpus_1: 4
+[2022-11-13 00:29:10,037 INFO] Weighted corpora loaded so far:
+			* corpus_1: 5
+[2022-11-13 00:29:10,041 INFO] Weighted corpora loaded so far:
+			* corpus_1: 4
+[2022-11-13 00:29:10,055 INFO] Weighted corpora loaded so far:
+			* corpus_1: 6
+[2022-11-13 00:29:10,064 INFO] Weighted corpora loaded so far:
+			* corpus_1: 5
+[2022-11-13 00:29:10,072 INFO] Weighted corpora loaded so far:
+			* corpus_1: 7
+[2022-11-13 00:29:10,077 INFO] Weighted corpora loaded so far:
+			* corpus_1: 6
+[2022-11-13 00:29:10,091 INFO] Weighted corpora loaded so far:
+			* corpus_1: 8
+[2022-11-13 00:29:10,092 INFO] Weighted corpora loaded so far:
+			* corpus_1: 7
+[2022-11-13 00:29:10,109 INFO] Weighted corpora loaded so far:
+			* corpus_1: 9
+[2022-11-13 00:29:10,112 INFO] Weighted corpora loaded so far:
+			* corpus_1: 8
+[2022-11-13 00:29:10,135 INFO] Weighted corpora loaded so far:
+			* corpus_1: 9
+[2022-11-13 00:29:10,201 INFO] Weighted corpora loaded so far:
+			* corpus_1: 10
+[2022-11-13 00:29:10,219 INFO] Weighted corpora loaded so far:
+			* corpus_1: 11
+[2022-11-13 00:29:10,219 INFO] Weighted corpora loaded so far:
+			* corpus_1: 10
+[2022-11-13 00:29:10,238 INFO] Weighted corpora loaded so far:
+			* corpus_1: 12
+[2022-11-13 00:29:10,238 INFO] Weighted corpora loaded so far:
+			* corpus_1: 11
+[2022-11-13 00:29:10,256 INFO] Weighted corpora loaded so far:
+			* corpus_1: 13
+[2022-11-13 00:29:10,256 INFO] Weighted corpora loaded so far:
+			* corpus_1: 12
+[2022-11-13 00:29:10,273 INFO] Weighted corpora loaded so far:
+			* corpus_1: 13
+[2022-11-13 00:29:10,274 INFO] Weighted corpora loaded so far:
+			* corpus_1: 14
+[2022-11-13 00:29:10,290 INFO] Weighted corpora loaded so far:
+			* corpus_1: 14
+[2022-11-13 00:29:10,293 INFO] Weighted corpora loaded so far:
+			* corpus_1: 15
+[2022-11-13 00:29:10,303 INFO] Weighted corpora loaded so far:
+			* corpus_1: 15
+[2022-11-13 00:29:10,397 INFO] Weighted corpora loaded so far:
+			* corpus_1: 16
+[2022-11-13 00:29:10,412 INFO] Weighted corpora loaded so far:
+			* corpus_1: 17
+[2022-11-13 00:29:10,413 INFO] Weighted corpora loaded so far:
+			* corpus_1: 16
+[2022-11-13 00:29:10,430 INFO] Weighted corpora loaded so far:
+			* corpus_1: 18
+[2022-11-13 00:29:10,431 INFO] Weighted corpora loaded so far:
+			* corpus_1: 17
+[2022-11-13 00:29:10,447 INFO] Weighted corpora loaded so far:
+			* corpus_1: 19
+[2022-11-13 00:29:10,450 INFO] Weighted corpora loaded so far:
+			* corpus_1: 18
+[2022-11-13 00:29:10,465 INFO] Weighted corpora loaded so far:
+			* corpus_1: 20
+[2022-11-13 00:29:10,468 INFO] Weighted corpora loaded so far:
+			* corpus_1: 19
+[2022-11-13 00:29:10,482 INFO] Weighted corpora loaded so far:
+			* corpus_1: 20
+[2022-11-13 00:29:10,482 INFO] Weighted corpora loaded so far:
+			* corpus_1: 21
+[2022-11-13 00:29:10,500 INFO] Weighted corpora loaded so far:
+			* corpus_1: 22
+[2022-11-13 00:29:10,501 INFO] Weighted corpora loaded so far:
+			* corpus_1: 21
+[2022-11-13 00:29:10,520 INFO] Weighted corpora loaded so far:
+			* corpus_1: 22
+[2022-11-13 00:29:10,631 INFO] Weighted corpora loaded so far:
+			* corpus_1: 23
+[2022-11-13 00:29:10,645 INFO] Weighted corpora loaded so far:
+			* corpus_1: 23
+[2022-11-13 00:29:10,647 INFO] Weighted corpora loaded so far:
+			* corpus_1: 24
+[2022-11-13 00:29:10,662 INFO] Weighted corpora loaded so far:
+			* corpus_1: 24
+[2022-11-13 00:29:10,667 INFO] Weighted corpora loaded so far:
+			* corpus_1: 25
+[2022-11-13 00:29:10,681 INFO] Weighted corpora loaded so far:
+			* corpus_1: 25
+[2022-11-13 00:29:10,686 INFO] Weighted corpora loaded so far:
+			* corpus_1: 26
+[2022-11-13 00:29:10,698 INFO] Weighted corpora loaded so far:
+			* corpus_1: 26
+[2022-11-13 00:29:10,705 INFO] Weighted corpora loaded so far:
+			* corpus_1: 27
+[2022-11-13 00:29:10,716 INFO] Weighted corpora loaded so far:
+			* corpus_1: 27
+[2022-11-13 00:29:10,722 INFO] Weighted corpora loaded so far:
+			* corpus_1: 28
+[2022-11-13 00:29:10,734 INFO] Weighted corpora loaded so far:
+			* corpus_1: 28
+[2022-11-13 00:29:10,740 INFO] Weighted corpora loaded so far:
+			* corpus_1: 29
+[2022-11-13 00:29:10,753 INFO] Weighted corpora loaded so far:
+			* corpus_1: 29
+[2022-11-13 00:29:10,759 INFO] Weighted corpora loaded so far:
+			* corpus_1: 30
+[2022-11-13 00:29:10,770 INFO] Weighted corpora loaded so far:
+			* corpus_1: 30
+[2022-11-13 00:29:10,902 INFO] Weighted corpora loaded so far:
+			* corpus_1: 31
+[2022-11-13 00:29:10,921 INFO] Weighted corpora loaded so far:
+			* corpus_1: 32
+[2022-11-13 00:29:10,936 INFO] Weighted corpora loaded so far:
+			* corpus_1: 31
+[2022-11-13 00:29:10,940 INFO] Weighted corpora loaded so far:
+			* corpus_1: 33
+[2022-11-13 00:29:10,956 INFO] Weighted corpora loaded so far:
+			* corpus_1: 32
+[2022-11-13 00:29:10,959 INFO] Weighted corpora loaded so far:
+			* corpus_1: 34
+[2022-11-13 00:29:10,976 INFO] Weighted corpora loaded so far:
+			* corpus_1: 35
+[2022-11-13 00:29:10,976 INFO] Weighted corpora loaded so far:
+			* corpus_1: 33
+[2022-11-13 00:29:10,993 INFO] Weighted corpora loaded so far:
+			* corpus_1: 34
+[2022-11-13 00:29:10,993 INFO] Weighted corpora loaded so far:
+			* corpus_1: 36
+[2022-11-13 00:29:11,009 INFO] Weighted corpora loaded so far:
+			* corpus_1: 37
+[2022-11-13 00:29:11,010 INFO] Weighted corpora loaded so far:
+			* corpus_1: 35
+[2022-11-13 00:29:11,028 INFO] Weighted corpora loaded so far:
+			* corpus_1: 38
+[2022-11-13 00:29:11,029 INFO] Weighted corpora loaded so far:
+			* corpus_1: 36
+[2022-11-13 00:29:11,048 INFO] Weighted corpora loaded so far:
+			* corpus_1: 39
+[2022-11-13 00:29:11,048 INFO] Weighted corpora loaded so far:
+			* corpus_1: 37
+[2022-11-13 00:29:11,065 INFO] Weighted corpora loaded so far:
+			* corpus_1: 38
+[2022-11-13 00:29:11,069 INFO] Weighted corpora loaded so far:
+			* corpus_1: 40
+[2022-11-13 00:29:11,081 INFO] Weighted corpora loaded so far:
+			* corpus_1: 39
+[2022-11-13 00:29:11,101 INFO] Weighted corpora loaded so far:
+			* corpus_1: 40
+[2022-11-13 00:29:11,254 INFO] Weighted corpora loaded so far:
+			* corpus_1: 41
+[2022-11-13 00:29:11,270 INFO] Weighted corpora loaded so far:
+			* corpus_1: 42
+[2022-11-13 00:29:11,291 INFO] Weighted corpora loaded so far:
+			* corpus_1: 43
+[2022-11-13 00:29:11,311 INFO] Weighted corpora loaded so far:
+			* corpus_1: 44
+[2022-11-13 00:29:11,324 INFO] Weighted corpora loaded so far:
+			* corpus_1: 41
+[2022-11-13 00:29:11,330 INFO] Weighted corpora loaded so far:
+			* corpus_1: 45
+[2022-11-13 00:29:11,344 INFO] Weighted corpora loaded so far:
+			* corpus_1: 42
+[2022-11-13 00:29:11,351 INFO] Weighted corpora loaded so far:
+			* corpus_1: 46
+[2022-11-13 00:29:11,366 INFO] Weighted corpora loaded so far:
+			* corpus_1: 43
+[2022-11-13 00:29:11,371 INFO] Weighted corpora loaded so far:
+			* corpus_1: 47
+[2022-11-13 00:29:11,386 INFO] Weighted corpora loaded so far:
+			* corpus_1: 44
+[2022-11-13 00:29:11,390 INFO] Weighted corpora loaded so far:
+			* corpus_1: 48
+[2022-11-13 00:29:11,402 INFO] Weighted corpora loaded so far:
+			* corpus_1: 45
+[2022-11-13 00:29:11,408 INFO] Weighted corpora loaded so far:
+			* corpus_1: 49
+[2022-11-13 00:29:11,420 INFO] Weighted corpora loaded so far:
+			* corpus_1: 46
+[2022-11-13 00:29:11,428 INFO] Weighted corpora loaded so far:
+			* corpus_1: 50
+[2022-11-13 00:29:11,438 INFO] Weighted corpora loaded so far:
+			* corpus_1: 47
+[2022-11-13 00:29:11,446 INFO] Weighted corpora loaded so far:
+			* corpus_1: 51
+[2022-11-13 00:29:11,458 INFO] Weighted corpora loaded so far:
+			* corpus_1: 48
+[2022-11-13 00:29:11,464 INFO] Weighted corpora loaded so far:
+			* corpus_1: 52
+[2022-11-13 00:29:11,472 INFO] Weighted corpora loaded so far:
+			* corpus_1: 49
+[2022-11-13 00:29:11,479 INFO] Weighted corpora loaded so far:
+			* corpus_1: 53
+[2022-11-13 00:29:11,489 INFO] Weighted corpora loaded so far:
+			* corpus_1: 50
+[2022-11-13 00:29:11,507 INFO] Weighted corpora loaded so far:
+			* corpus_1: 51
+[2022-11-13 00:29:11,526 INFO] Weighted corpora loaded so far:
+			* corpus_1: 52
+[2022-11-13 00:29:11,544 INFO] Weighted corpora loaded so far:
+			* corpus_1: 53
+[2022-11-13 00:29:11,694 INFO] Weighted corpora loaded so far:
+			* corpus_1: 54
+[2022-11-13 00:29:11,713 INFO] Weighted corpora loaded so far:
+			* corpus_1: 55
+[2022-11-13 00:29:11,733 INFO] Weighted corpora loaded so far:
+			* corpus_1: 56
+[2022-11-13 00:29:11,750 INFO] Weighted corpora loaded so far:
+			* corpus_1: 57
+[2022-11-13 00:29:11,769 INFO] Weighted corpora loaded so far:
+			* corpus_1: 58
+[2022-11-13 00:29:11,785 INFO] Weighted corpora loaded so far:
+			* corpus_1: 59
+[2022-11-13 00:29:11,802 INFO] Weighted corpora loaded so far:
+			* corpus_1: 60
+[2022-11-13 00:29:11,809 INFO] Weighted corpora loaded so far:
+			* corpus_1: 54
+[2022-11-13 00:29:11,819 INFO] Weighted corpora loaded so far:
+			* corpus_1: 61
+[2022-11-13 00:29:11,827 INFO] Weighted corpora loaded so far:
+			* corpus_1: 55
+[2022-11-13 00:29:11,837 INFO] Weighted corpora loaded so far:
+			* corpus_1: 62
+[2022-11-13 00:29:11,842 INFO] Weighted corpora loaded so far:
+			* corpus_1: 56
+[2022-11-13 00:29:11,857 INFO] Weighted corpora loaded so far:
+			* corpus_1: 63
+[2022-11-13 00:29:11,860 INFO] Weighted corpora loaded so far:
+			* corpus_1: 57
+[2022-11-13 00:29:11,878 INFO] Weighted corpora loaded so far:
+			* corpus_1: 64
+[2022-11-13 00:29:11,879 INFO] Weighted corpora loaded so far:
+			* corpus_1: 58
+[2022-11-13 00:29:11,899 INFO] Weighted corpora loaded so far:
+			* corpus_1: 59
+[2022-11-13 00:29:11,901 INFO] Weighted corpora loaded so far:
+			* corpus_1: 65
+[2022-11-13 00:29:11,914 INFO] Weighted corpora loaded so far:
+			* corpus_1: 60
+[2022-11-13 00:29:11,917 INFO] Weighted corpora loaded so far:
+			* corpus_1: 66
+[2022-11-13 00:29:11,931 INFO] Weighted corpora loaded so far:
+			* corpus_1: 61
+[2022-11-13 00:29:11,936 INFO] Weighted corpora loaded so far:
+			* corpus_1: 67
+[2022-11-13 00:29:11,950 INFO] Weighted corpora loaded so far:
+			* corpus_1: 62
+[2022-11-13 00:29:11,955 INFO] Weighted corpora loaded so far:
+			* corpus_1: 68
+[2022-11-13 00:29:11,969 INFO] Weighted corpora loaded so far:
+			* corpus_1: 63
+[2022-11-13 00:29:11,988 INFO] Weighted corpora loaded so far:
+			* corpus_1: 64
+[2022-11-13 00:29:12,002 INFO] Weighted corpora loaded so far:
+			* corpus_1: 65
+[2022-11-13 00:29:12,023 INFO] Weighted corpora loaded so far:
+			* corpus_1: 66
+[2022-11-13 00:29:12,041 INFO] Weighted corpora loaded so far:
+			* corpus_1: 67
+[2022-11-13 00:29:12,060 INFO] Weighted corpora loaded so far:
+			* corpus_1: 68
+[2022-11-13 00:29:12,222 INFO] Weighted corpora loaded so far:
+			* corpus_1: 69
+[2022-11-13 00:29:12,243 INFO] Weighted corpora loaded so far:
+			* corpus_1: 70
+[2022-11-13 00:29:12,262 INFO] Weighted corpora loaded so far:
+			* corpus_1: 71
+[2022-11-13 00:29:12,281 INFO] Weighted corpora loaded so far:
+			* corpus_1: 72
+[2022-11-13 00:29:12,299 INFO] Weighted corpora loaded so far:
+			* corpus_1: 73
+[2022-11-13 00:29:12,319 INFO] Weighted corpora loaded so far:
+			* corpus_1: 74
+[2022-11-13 00:29:12,339 INFO] Weighted corpora loaded so far:
+			* corpus_1: 75
+[2022-11-13 00:29:12,359 INFO] Weighted corpora loaded so far:
+			* corpus_1: 76
+[2022-11-13 00:29:12,380 INFO] Weighted corpora loaded so far:
+			* corpus_1: 77
+[2022-11-13 00:29:12,388 INFO] Weighted corpora loaded so far:
+			* corpus_1: 69
+[2022-11-13 00:29:12,401 INFO] Weighted corpora loaded so far:
+			* corpus_1: 78
+[2022-11-13 00:29:12,406 INFO] Weighted corpora loaded so far:
+			* corpus_1: 70
+[2022-11-13 00:29:12,417 INFO] Weighted corpora loaded so far:
+			* corpus_1: 79
+[2022-11-13 00:29:12,424 INFO] Weighted corpora loaded so far:
+			* corpus_1: 71
+[2022-11-13 00:29:12,434 INFO] Weighted corpora loaded so far:
+			* corpus_1: 80
+[2022-11-13 00:29:12,443 INFO] Weighted corpora loaded so far:
+			* corpus_1: 72
+[2022-11-13 00:29:12,452 INFO] Weighted corpora loaded so far:
+			* corpus_1: 81
+[2022-11-13 00:29:12,464 INFO] Weighted corpora loaded so far:
+			* corpus_1: 73
+[2022-11-13 00:29:12,472 INFO] Weighted corpora loaded so far:
+			* corpus_1: 82
+[2022-11-13 00:29:12,482 INFO] Weighted corpora loaded so far:
+			* corpus_1: 74
+[2022-11-13 00:29:12,488 INFO] Weighted corpora loaded so far:
+			* corpus_1: 83
+[2022-11-13 00:29:12,498 INFO] Weighted corpora loaded so far:
+			* corpus_1: 75
+[2022-11-13 00:29:12,507 INFO] Weighted corpora loaded so far:
+			* corpus_1: 84
+[2022-11-13 00:29:12,515 INFO] Weighted corpora loaded so far:
+			* corpus_1: 76
+[2022-11-13 00:29:12,524 INFO] Weighted corpora loaded so far:
+			* corpus_1: 85
+[2022-11-13 00:29:12,534 INFO] Weighted corpora loaded so far:
+			* corpus_1: 77
+[2022-11-13 00:29:12,543 INFO] Weighted corpora loaded so far:
+			* corpus_1: 86
+[2022-11-13 00:29:12,555 INFO] Weighted corpora loaded so far:
+			* corpus_1: 78
+[2022-11-13 00:29:12,564 INFO] Weighted corpora loaded so far:
+			* corpus_1: 87
+[2022-11-13 00:29:12,576 INFO] Weighted corpora loaded so far:
+			* corpus_1: 79
+[2022-11-13 00:29:12,586 INFO] Weighted corpora loaded so far:
+			* corpus_1: 88
+[2022-11-13 00:29:12,596 INFO] Weighted corpora loaded so far:
+			* corpus_1: 80
+[2022-11-13 00:29:12,614 INFO] Weighted corpora loaded so far:
+			* corpus_1: 81
+[2022-11-13 00:29:12,633 INFO] Weighted corpora loaded so far:
+			* corpus_1: 82
+[2022-11-13 00:29:12,652 INFO] Weighted corpora loaded so far:
+			* corpus_1: 83
+[2022-11-13 00:29:12,670 INFO] Weighted corpora loaded so far:
+			* corpus_1: 84
+[2022-11-13 00:29:12,688 INFO] Weighted corpora loaded so far:
+			* corpus_1: 85
+[2022-11-13 00:29:12,705 INFO] Weighted corpora loaded so far:
+			* corpus_1: 86
+[2022-11-13 00:29:12,724 INFO] Weighted corpora loaded so far:
+			* corpus_1: 87
+[2022-11-13 00:29:12,736 INFO] Weighted corpora loaded so far:
+			* corpus_1: 88
+[2022-11-13 00:29:12,884 INFO] Weighted corpora loaded so far:
+			* corpus_1: 89
+[2022-11-13 00:29:12,904 INFO] Weighted corpora loaded so far:
+			* corpus_1: 90
+[2022-11-13 00:29:12,926 INFO] Weighted corpora loaded so far:
+			* corpus_1: 91
+[2022-11-13 00:29:12,947 INFO] Weighted corpora loaded so far:
+			* corpus_1: 92
+[2022-11-13 00:29:12,968 INFO] Weighted corpora loaded so far:
+			* corpus_1: 93
+[2022-11-13 00:29:12,984 INFO] Weighted corpora loaded so far:
+			* corpus_1: 94
+[2022-11-13 00:29:13,003 INFO] Weighted corpora loaded so far:
+			* corpus_1: 95
+[2022-11-13 00:29:13,022 INFO] Weighted corpora loaded so far:
+			* corpus_1: 96
+[2022-11-13 00:29:13,042 INFO] Weighted corpora loaded so far:
+			* corpus_1: 97
+[2022-11-13 00:29:13,061 INFO] Weighted corpora loaded so far:
+			* corpus_1: 98
+[2022-11-13 00:29:13,067 INFO] Weighted corpora loaded so far:
+			* corpus_1: 89
+[2022-11-13 00:29:13,079 INFO] Weighted corpora loaded so far:
+			* corpus_1: 99
+[2022-11-13 00:29:13,084 INFO] Weighted corpora loaded so far:
+			* corpus_1: 90
+[2022-11-13 00:29:13,097 INFO] Weighted corpora loaded so far:
+			* corpus_1: 100
+[2022-11-13 00:29:13,101 INFO] Weighted corpora loaded so far:
+			* corpus_1: 91
+[2022-11-13 00:29:13,113 INFO] Weighted corpora loaded so far:
+			* corpus_1: 101
+[2022-11-13 00:29:13,122 INFO] Weighted corpora loaded so far:
+			* corpus_1: 92
+[2022-11-13 00:29:13,130 INFO] Weighted corpora loaded so far:
+			* corpus_1: 102
+[2022-11-13 00:29:13,144 INFO] Weighted corpora loaded so far:
+			* corpus_1: 93
+[2022-11-13 00:29:13,149 INFO] Weighted corpora loaded so far:
+			* corpus_1: 103
+[2022-11-13 00:29:13,161 INFO] Weighted corpora loaded so far:
+			* corpus_1: 94
+[2022-11-13 00:29:13,167 INFO] Weighted corpora loaded so far:
+			* corpus_1: 104
+[2022-11-13 00:29:13,179 INFO] Weighted corpora loaded so far:
+			* corpus_1: 95
+[2022-11-13 00:29:13,184 INFO] Weighted corpora loaded so far:
+			* corpus_1: 105
+[2022-11-13 00:29:13,196 INFO] Weighted corpora loaded so far:
+			* corpus_1: 96
+[2022-11-13 00:29:13,203 INFO] Weighted corpora loaded so far:
+			* corpus_1: 106
+[2022-11-13 00:29:13,213 INFO] Weighted corpora loaded so far:
+			* corpus_1: 97
+[2022-11-13 00:29:13,220 INFO] Weighted corpora loaded so far:
+			* corpus_1: 107
+[2022-11-13 00:29:13,232 INFO] Weighted corpora loaded so far:
+			* corpus_1: 98
+[2022-11-13 00:29:13,238 INFO] Weighted corpora loaded so far:
+			* corpus_1: 108
+[2022-11-13 00:29:13,248 INFO] Weighted corpora loaded so far:
+			* corpus_1: 99
+[2022-11-13 00:29:13,264 INFO] Weighted corpora loaded so far:
+			* corpus_1: 100
+[2022-11-13 00:29:13,281 INFO] Weighted corpora loaded so far:
+			* corpus_1: 101
+[2022-11-13 00:29:13,299 INFO] Weighted corpora loaded so far:
+			* corpus_1: 102
+[2022-11-13 00:29:13,318 INFO] Weighted corpora loaded so far:
+			* corpus_1: 103
+[2022-11-13 00:29:13,339 INFO] Weighted corpora loaded so far:
+			* corpus_1: 104
+[2022-11-13 00:29:13,359 INFO] Weighted corpora loaded so far:
+			* corpus_1: 105
+[2022-11-13 00:29:13,378 INFO] Weighted corpora loaded so far:
+			* corpus_1: 106
+[2022-11-13 00:29:13,396 INFO] Weighted corpora loaded so far:
+			* corpus_1: 107
+[2022-11-13 00:29:13,417 INFO] Weighted corpora loaded so far:
+			* corpus_1: 108
+[2022-11-13 00:38:24,518 INFO] Step 243/24325; acc: 58.9; ppl:   4.6; xent: 1.5; lr: 1.00000; sents:    4860; bsz:  146/ 190/20;  64/ 83 tok/s;    555 sec;
+[2022-11-13 00:48:47,480 INFO] Step 486/24325; acc: 94.5; ppl:   1.2; xent: 0.2; lr: 1.00000; sents:    4860; bsz:  145/ 189/20;  57/ 74 tok/s;   1178 sec;
+[2022-11-13 00:59:54,538 INFO] Step 729/24325; acc: 96.9; ppl:   1.1; xent: 0.1; lr: 1.00000; sents:    4860; bsz:  152/ 197/20;  56/ 72 tok/s;   1845 sec;
+[2022-11-13 01:10:29,034 INFO] Step 972/24325; acc: 97.6; ppl:   1.1; xent: 0.1; lr: 1.00000; sents:    4860; bsz:  145/ 187/20;  55/ 72 tok/s;   2479 sec;
+[2022-11-13 01:20:54,658 INFO] Step 1215/24325; acc: 98.6; ppl:   1.1; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  141/ 186/20;  55/ 72 tok/s;   3105 sec;
+[2022-11-13 01:32:11,333 INFO] Step 1458/24325; acc: 98.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  156/ 199/20;  56/ 71 tok/s;   3781 sec;
+[2022-11-13 01:43:22,423 INFO] Step 1701/24325; acc: 99.1; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  155/ 201/20;  56/ 73 tok/s;   4453 sec;
+[2022-11-13 01:54:19,460 INFO] Step 1944/24325; acc: 99.5; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  149/ 194/20;  55/ 72 tok/s;   5110 sec;
+[2022-11-13 02:05:08,064 INFO] Step 2187/24325; acc: 99.4; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  150/ 193/20;  56/ 72 tok/s;   5758 sec;
+[2022-11-13 02:16:00,721 INFO] Step 2430/24325; acc: 99.7; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  148/ 193/20;  55/ 72 tok/s;   6411 sec;
+[2022-11-13 02:27:02,423 INFO] Step 2673/24325; acc: 99.6; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  151/ 194/20;  55/ 71 tok/s;   7073 sec;
+[2022-11-13 02:38:06,882 INFO] Step 2916/24325; acc: 99.8; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  150/ 196/20;  55/ 72 tok/s;   7737 sec;
+[2022-11-13 02:49:20,442 INFO] Step 3159/24325; acc: 99.8; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  147/ 192/20;  53/ 69 tok/s;   8411 sec;
+[2022-11-13 02:59:58,499 INFO] Step 3402/24325; acc: 99.8; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  145/ 188/20;  55/ 72 tok/s;   9049 sec;
+[2022-11-13 03:10:42,858 INFO] Step 3645/24325; acc: 99.8; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4851; bsz:  147/ 191/20;  55/ 72 tok/s;   9693 sec;
+[2022-11-13 03:21:22,238 INFO] Step 3888/24325; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4856; bsz:  145/ 188/20;  55/ 72 tok/s;  10332 sec;
+[2022-11-13 03:32:19,811 INFO] Step 4131/24325; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  148/ 192/20;  55/ 71 tok/s;  10990 sec;
+[2022-11-13 03:43:18,933 INFO] Step 4374/24325; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  148/ 193/20;  54/ 71 tok/s;  11649 sec;
+[2022-11-13 03:54:53,234 INFO] Step 4617/24325; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  151/ 195/20;  53/ 68 tok/s;  12343 sec;
+[2022-11-13 04:05:58,909 INFO] Step 4860/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  148/ 192/20;  54/ 70 tok/s;  13009 sec;
+[2022-11-13 04:16:49,896 INFO] Step 5103/24325; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  149/ 193/20;  56/ 72 tok/s;  13660 sec;
+[2022-11-13 04:27:44,145 INFO] Step 5346/24325; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  147/ 190/20;  55/ 71 tok/s;  14314 sec;
+[2022-11-13 04:39:00,883 INFO] Step 5589/24325; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  149/ 193/20;  54/ 69 tok/s;  14991 sec;
+[2022-11-13 04:49:57,762 INFO] Step 5832/24325; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  150/ 194/20;  56/ 72 tok/s;  15648 sec;
+[2022-11-13 05:00:55,099 INFO] Step 6075/24325; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  145/ 191/20;  54/ 70 tok/s;  16305 sec;
+[2022-11-13 05:11:56,612 INFO] Step 6318/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  152/ 196/20;  56/ 72 tok/s;  16967 sec;
+[2022-11-13 05:23:05,299 INFO] Step 6561/24325; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  151/ 194/20;  55/ 71 tok/s;  17635 sec;
+[2022-11-13 05:33:50,968 INFO] Step 6804/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  146/ 191/20;  55/ 72 tok/s;  18281 sec;
+[2022-11-13 05:44:44,331 INFO] Step 7047/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  149/ 195/20;  56/ 72 tok/s;  18934 sec;
+[2022-11-13 05:55:31,638 INFO] Step 7290/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  148/ 192/20;  56/ 72 tok/s;  19582 sec;
+[2022-11-13 06:06:47,222 INFO] Step 7533/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  154/ 199/20;  55/ 72 tok/s;  20257 sec;
+[2022-11-13 06:17:58,192 INFO] Step 7776/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  149/ 193/20;  54/ 70 tok/s;  20928 sec;
+[2022-11-13 06:29:03,486 INFO] Step 8019/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  145/ 190/20;  53/ 69 tok/s;  21594 sec;
+[2022-11-13 06:40:09,136 INFO] Step 8262/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  149/ 193/20;  55/ 71 tok/s;  22259 sec;
+[2022-11-13 06:51:05,393 INFO] Step 8505/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  144/ 188/20;  53/ 70 tok/s;  22916 sec;
+[2022-11-13 07:02:10,169 INFO] Step 8748/24325; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  151/ 194/20;  55/ 71 tok/s;  23580 sec;
+[2022-11-13 07:13:07,689 INFO] Step 8991/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  149/ 194/20;  55/ 72 tok/s;  24238 sec;
+[2022-11-13 07:23:47,583 INFO] Step 9234/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  146/ 191/20;  55/ 73 tok/s;  24878 sec;
+[2022-11-13 07:34:57,156 INFO] Step 9477/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  154/ 199/20;  56/ 72 tok/s;  25547 sec;
+[2022-11-13 07:46:14,395 INFO] Step 9720/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  150/ 196/20;  54/ 70 tok/s;  26225 sec;
+[2022-11-13 07:57:25,475 INFO] Step 9963/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  153/ 198/20;  56/ 72 tok/s;  26896 sec;
+[2022-11-13 08:08:36,033 INFO] Step 10206/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  151/ 195/20;  55/ 71 tok/s;  27566 sec;
+[2022-11-13 08:19:36,085 INFO] Step 10449/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  150/ 195/20;  55/ 72 tok/s;  28226 sec;
+[2022-11-13 08:30:58,893 INFO] Step 10692/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  151/ 196/20;  54/ 70 tok/s;  28909 sec;
+[2022-11-13 08:41:51,491 INFO] Step 10935/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  146/ 189/20;  54/ 70 tok/s;  29562 sec;
+[2022-11-13 08:52:44,735 INFO] Step 11178/24325; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  145/ 190/20;  54/ 71 tok/s;  30215 sec;
+[2022-11-13 09:03:40,110 INFO] Step 11421/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  148/ 192/20;  55/ 71 tok/s;  30870 sec;
+[2022-11-13 09:14:21,130 INFO] Step 11664/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  147/ 190/20;  56/ 72 tok/s;  31511 sec;
+[2022-11-13 09:25:19,091 INFO] Step 11907/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  145/ 190/20;  54/ 70 tok/s;  32169 sec;
+[2022-11-13 09:36:06,056 INFO] Step 12150/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  148/ 192/20;  56/ 72 tok/s;  32816 sec;
+[2022-11-13 09:46:53,213 INFO] Step 12393/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  146/ 191/20;  55/ 72 tok/s;  33463 sec;
+[2022-11-13 09:57:38,946 INFO] Step 12636/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  148/ 192/20;  56/ 72 tok/s;  34109 sec;
+[2022-11-13 10:08:40,240 INFO] Step 12879/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  149/ 193/20;  55/ 71 tok/s;  34770 sec;
+[2022-11-13 10:19:20,407 INFO] Step 13122/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  147/ 191/20;  56/ 73 tok/s;  35411 sec;
+[2022-11-13 10:30:23,000 INFO] Step 13365/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  147/ 189/20;  54/ 69 tok/s;  36073 sec;
+[2022-11-13 10:41:41,468 INFO] Step 13608/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  155/ 200/20;  56/ 72 tok/s;  36752 sec;
+[2022-11-13 10:52:32,680 INFO] Step 13851/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  150/ 195/20;  56/ 73 tok/s;  37403 sec;
+[2022-11-13 11:03:42,391 INFO] Step 14094/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  148/ 192/20;  54/ 70 tok/s;  38073 sec;
+[2022-11-13 11:14:44,398 INFO] Step 14337/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  149/ 192/20;  55/ 71 tok/s;  38735 sec;
+[2022-11-13 11:25:40,822 INFO] Step 14580/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  149/ 191/20;  55/ 71 tok/s;  39391 sec;
+[2022-11-13 11:36:35,177 INFO] Step 14823/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  146/ 190/20;  54/ 71 tok/s;  40045 sec;
+[2022-11-13 11:41:02,388 INFO] Step 15066/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  147/ 191/20; 134/173 tok/s;  40313 sec;
+[2022-11-13 11:42:18,718 INFO] Step 15309/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  150/ 194/20; 478/618 tok/s;  40389 sec;
+[2022-11-13 11:43:34,970 INFO] Step 15552/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  151/ 195/20; 481/621 tok/s;  40465 sec;
+[2022-11-13 11:44:53,445 INFO] Step 15795/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  158/ 203/20; 488/628 tok/s;  40544 sec;
+[2022-11-13 11:46:08,502 INFO] Step 16038/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  150/ 194/20; 486/627 tok/s;  40619 sec;
+[2022-11-13 11:47:23,238 INFO] Step 16281/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  149/ 193/20; 484/627 tok/s;  40693 sec;
+[2022-11-13 11:48:38,016 INFO] Step 16524/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  148/ 192/20; 481/623 tok/s;  40768 sec;
+[2022-11-13 11:49:52,033 INFO] Step 16767/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  148/ 192/20; 485/630 tok/s;  40842 sec;
+[2022-11-13 11:51:08,262 INFO] Step 17010/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  152/ 197/20; 485/628 tok/s;  40918 sec;
+[2022-11-13 11:52:26,444 INFO] Step 17253/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  154/ 200/20; 479/621 tok/s;  40997 sec;
+[2022-11-13 11:53:44,533 INFO] Step 17496/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  155/ 200/20; 482/621 tok/s;  41075 sec;
+[2022-11-13 11:54:58,987 INFO] Step 17739/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  148/ 191/20; 483/624 tok/s;  41149 sec;
+[2022-11-13 11:56:14,737 INFO] Step 17982/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  153/ 197/20; 490/631 tok/s;  41225 sec;
+[2022-11-13 11:57:30,115 INFO] Step 18225/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  149/ 193/20; 480/621 tok/s;  41300 sec;
+[2022-11-13 11:58:48,638 INFO] Step 18468/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  153/ 200/20; 473/618 tok/s;  41379 sec;
+[2022-11-13 12:00:04,401 INFO] Step 18711/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  148/ 191/20; 474/614 tok/s;  41455 sec;
+[2022-11-13 12:01:18,606 INFO] Step 18954/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  145/ 188/20; 476/615 tok/s;  41529 sec;
+[2022-11-13 12:02:36,921 INFO] Step 19197/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  150/ 196/20; 465/607 tok/s;  41607 sec;
+[2022-11-13 12:03:53,236 INFO] Step 19440/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  150/ 194/20; 477/617 tok/s;  41683 sec;
+[2022-11-13 12:05:08,512 INFO] Step 19683/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  149/ 193/20; 481/623 tok/s;  41759 sec;
+[2022-11-13 12:06:28,241 INFO] Step 19926/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  147/ 191/20; 450/583 tok/s;  41838 sec;
+[2022-11-13 12:15:36,361 INFO] Step 20169/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  148/ 192/20;  65/ 85 tok/s;  42387 sec;
+[2022-11-13 12:25:51,932 INFO] Step 20412/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  145/ 188/20;  57/ 74 tok/s;  43002 sec;
+[2022-11-13 12:36:19,815 INFO] Step 20655/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  151/ 195/20;  58/ 75 tok/s;  43630 sec;
+[2022-11-13 12:46:48,664 INFO] Step 20898/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  149/ 192/20;  57/ 74 tok/s;  44259 sec;
+[2022-11-13 12:57:23,595 INFO] Step 21141/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  150/ 196/20;  58/ 75 tok/s;  44894 sec;
+[2022-11-13 13:07:52,286 INFO] Step 21384/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  148/ 191/20;  57/ 74 tok/s;  45522 sec;
+[2022-11-13 13:18:13,161 INFO] Step 21627/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  146/ 189/20;  57/ 74 tok/s;  46143 sec;
+[2022-11-13 13:28:36,168 INFO] Step 21870/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  150/ 195/20;  59/ 76 tok/s;  46766 sec;
+[2022-11-13 13:38:52,130 INFO] Step 22113/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  144/ 188/20;  57/ 74 tok/s;  47382 sec;
+[2022-11-13 13:49:21,903 INFO] Step 22356/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  149/ 193/20;  57/ 75 tok/s;  48012 sec;
+[2022-11-13 13:59:38,009 INFO] Step 22599/24325; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4860; bsz:  147/ 192/20;  58/ 76 tok/s;  48628 sec;
