@@ -1,2 +1,2 @@
 # connectionism
-hello
+Experiments on the connectionism paper. 
