@@ -8,7 +8,7 @@ tgt_vocab: data_eng1/run/phon/example.vocab.tgt
 overwrite: False
 
 # Corpus opts:
-data_eng1:
+data:
     corpus_1:
         path_src: data_eng1/phon/src_train.txt
         path_tgt: data_eng1/phon/tgt_train.txt
