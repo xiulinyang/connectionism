@@ -49,5 +49,10 @@ log_file_level: 20
 #save_validation_translation_every: 1
 # Where to save the checkpoints
 save_model: data_english/run/phon/model
+<<<<<<< HEAD
 save_checkpoint_steps: 24420
 train_steps: 24420
+=======
+save_checkpoint_steps: 244
+train_steps: 24420
+>>>>>>> 0fff851c5f23138fe8032eb99d6d29ce183ab3aa

@@ -1,0 +1,1398 @@
+[2022-11-13 22:50:43,108 INFO] Missing transforms field for corpus_1 data, set to default: [].
+[2022-11-13 22:50:43,108 WARNING] Corpus corpus_1's weight should be given. We default it to 1 for you.
+[2022-11-13 22:50:43,108 INFO] Missing transforms field for valid data, set to default: [].
+[2022-11-13 22:50:43,108 INFO] Parsed 2 corpora from -data.
+[2022-11-13 22:50:43,108 INFO] Get special vocabs from Transforms: {'src': set(), 'tgt': set()}.
+[2022-11-13 22:50:43,109 INFO] Building model...
+[2022-11-13 22:50:46,060 INFO] NMTModel(
+  (encoder): RNNEncoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(56, 500, padding_idx=1)
+        )
+      )
+    )
+    (rnn): LSTM(500, 250, num_layers=2, batch_first=True, dropout=0.3, bidirectional=True)
+  )
+  (decoder): InputFeedRNNDecoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(56, 500, padding_idx=1)
+        )
+      )
+    )
+    (dropout): Dropout(p=0.3, inplace=False)
+    (rnn): StackedLSTM(
+      (dropout): Dropout(p=0.3, inplace=False)
+      (layers): ModuleList(
+        (0): LSTMCell(1000, 500)
+        (1): LSTMCell(500, 500)
+      )
+    )
+    (attn): GlobalAttention(
+      (linear_in): Linear(in_features=500, out_features=500, bias=False)
+      (linear_out): Linear(in_features=1000, out_features=500, bias=False)
+    )
+  )
+  (generator): Sequential(
+    (0): Linear(in_features=500, out_features=56, bias=True)
+    (1): Cast()
+    (2): LogSoftmax(dim=-1)
+  )
+)
+[2022-11-13 22:50:46,062 INFO] encoder: 3036000
+[2022-11-13 22:50:46,062 INFO] decoder: 5814056
+[2022-11-13 22:50:46,062 INFO] * number of parameters: 8850056
+[2022-11-13 22:50:46,062 INFO]  * src vocab size = 56
+[2022-11-13 22:50:46,062 INFO]  * tgt vocab size = 56
+[2022-11-13 22:50:46,288 INFO] Starting training on GPU: [0]
+[2022-11-13 22:50:46,288 INFO] Start training loop and validate every 244 steps...
+[2022-11-13 22:50:46,318 INFO] Weighted corpora loaded so far:
+			* corpus_1: 1
+[2022-11-13 22:50:46,329 INFO] Weighted corpora loaded so far:
+			* corpus_1: 1
+[2022-11-13 22:50:46,341 INFO] Weighted corpora loaded so far:
+			* corpus_1: 2
+[2022-11-13 22:50:46,341 INFO] Weighted corpora loaded so far:
+			* corpus_1: 2
+[2022-11-13 22:50:46,352 INFO] Weighted corpora loaded so far:
+			* corpus_1: 3
+[2022-11-13 22:50:46,352 INFO] Weighted corpora loaded so far:
+			* corpus_1: 3
+[2022-11-13 22:50:46,362 INFO] Weighted corpora loaded so far:
+			* corpus_1: 4
+[2022-11-13 22:50:46,363 INFO] Weighted corpora loaded so far:
+			* corpus_1: 4
+[2022-11-13 22:50:46,373 INFO] Weighted corpora loaded so far:
+			* corpus_1: 5
+[2022-11-13 22:50:46,374 INFO] Weighted corpora loaded so far:
+			* corpus_1: 5
+[2022-11-13 22:50:46,383 INFO] Weighted corpora loaded so far:
+			* corpus_1: 6
+[2022-11-13 22:50:46,385 INFO] Weighted corpora loaded so far:
+			* corpus_1: 6
+[2022-11-13 22:50:46,442 INFO] Weighted corpora loaded so far:
+			* corpus_1: 7
+[2022-11-13 22:50:46,445 INFO] Weighted corpora loaded so far:
+			* corpus_1: 7
+[2022-11-13 22:50:46,453 INFO] Weighted corpora loaded so far:
+			* corpus_1: 8
+[2022-11-13 22:50:46,456 INFO] Weighted corpora loaded so far:
+			* corpus_1: 8
+[2022-11-13 22:50:46,464 INFO] Weighted corpora loaded so far:
+			* corpus_1: 9
+[2022-11-13 22:50:46,467 INFO] Weighted corpora loaded so far:
+			* corpus_1: 9
+[2022-11-13 22:50:46,474 INFO] Weighted corpora loaded so far:
+			* corpus_1: 10
+[2022-11-13 22:50:46,478 INFO] Weighted corpora loaded so far:
+			* corpus_1: 10
+[2022-11-13 22:50:46,484 INFO] Weighted corpora loaded so far:
+			* corpus_1: 11
+[2022-11-13 22:50:46,489 INFO] Weighted corpora loaded so far:
+			* corpus_1: 11
+[2022-11-13 22:50:46,495 INFO] Weighted corpora loaded so far:
+			* corpus_1: 12
+[2022-11-13 22:50:46,500 INFO] Weighted corpora loaded so far:
+			* corpus_1: 12
+[2022-11-13 22:50:46,554 INFO] Weighted corpora loaded so far:
+			* corpus_1: 13
+[2022-11-13 22:50:46,561 INFO] Weighted corpora loaded so far:
+			* corpus_1: 13
+[2022-11-13 22:50:46,564 INFO] Weighted corpora loaded so far:
+			* corpus_1: 14
+[2022-11-13 22:50:46,572 INFO] Weighted corpora loaded so far:
+			* corpus_1: 14
+[2022-11-13 22:50:46,575 INFO] Weighted corpora loaded so far:
+			* corpus_1: 15
+[2022-11-13 22:50:46,583 INFO] Weighted corpora loaded so far:
+			* corpus_1: 15
+[2022-11-13 22:50:46,585 INFO] Weighted corpora loaded so far:
+			* corpus_1: 16
+[2022-11-13 22:50:46,594 INFO] Weighted corpora loaded so far:
+			* corpus_1: 16
+[2022-11-13 22:50:46,596 INFO] Weighted corpora loaded so far:
+			* corpus_1: 17
+[2022-11-13 22:50:46,605 INFO] Weighted corpora loaded so far:
+			* corpus_1: 17
+[2022-11-13 22:50:46,606 INFO] Weighted corpora loaded so far:
+			* corpus_1: 18
+[2022-11-13 22:50:46,615 INFO] Weighted corpora loaded so far:
+			* corpus_1: 18
+[2022-11-13 22:50:46,616 INFO] Weighted corpora loaded so far:
+			* corpus_1: 19
+[2022-11-13 22:50:46,626 INFO] Weighted corpora loaded so far:
+			* corpus_1: 19
+[2022-11-13 22:50:46,690 INFO] Weighted corpora loaded so far:
+			* corpus_1: 20
+[2022-11-13 22:50:46,701 INFO] Weighted corpora loaded so far:
+			* corpus_1: 21
+[2022-11-13 22:50:46,702 INFO] Weighted corpora loaded so far:
+			* corpus_1: 20
+[2022-11-13 22:50:46,711 INFO] Weighted corpora loaded so far:
+			* corpus_1: 22
+[2022-11-13 22:50:46,713 INFO] Weighted corpora loaded so far:
+			* corpus_1: 21
+[2022-11-13 22:50:46,722 INFO] Weighted corpora loaded so far:
+			* corpus_1: 23
+[2022-11-13 22:50:46,723 INFO] Weighted corpora loaded so far:
+			* corpus_1: 22
+[2022-11-13 22:50:46,732 INFO] Weighted corpora loaded so far:
+			* corpus_1: 24
+[2022-11-13 22:50:46,734 INFO] Weighted corpora loaded so far:
+			* corpus_1: 23
+[2022-11-13 22:50:46,743 INFO] Weighted corpora loaded so far:
+			* corpus_1: 25
+[2022-11-13 22:50:46,745 INFO] Weighted corpora loaded so far:
+			* corpus_1: 24
+[2022-11-13 22:50:46,753 INFO] Weighted corpora loaded so far:
+			* corpus_1: 26
+[2022-11-13 22:50:46,756 INFO] Weighted corpora loaded so far:
+			* corpus_1: 25
+[2022-11-13 22:50:46,766 INFO] Weighted corpora loaded so far:
+			* corpus_1: 26
+[2022-11-13 22:50:46,842 INFO] Weighted corpora loaded so far:
+			* corpus_1: 27
+[2022-11-13 22:50:46,853 INFO] Weighted corpora loaded so far:
+			* corpus_1: 28
+[2022-11-13 22:50:46,857 INFO] Weighted corpora loaded so far:
+			* corpus_1: 27
+[2022-11-13 22:50:46,863 INFO] Weighted corpora loaded so far:
+			* corpus_1: 29
+[2022-11-13 22:50:46,868 INFO] Weighted corpora loaded so far:
+			* corpus_1: 28
+[2022-11-13 22:50:46,873 INFO] Weighted corpora loaded so far:
+			* corpus_1: 30
+[2022-11-13 22:50:46,879 INFO] Weighted corpora loaded so far:
+			* corpus_1: 29
+[2022-11-13 22:50:46,884 INFO] Weighted corpora loaded so far:
+			* corpus_1: 31
+[2022-11-13 22:50:46,890 INFO] Weighted corpora loaded so far:
+			* corpus_1: 30
+[2022-11-13 22:50:46,894 INFO] Weighted corpora loaded so far:
+			* corpus_1: 32
+[2022-11-13 22:50:46,901 INFO] Weighted corpora loaded so far:
+			* corpus_1: 31
+[2022-11-13 22:50:46,905 INFO] Weighted corpora loaded so far:
+			* corpus_1: 33
+[2022-11-13 22:50:46,912 INFO] Weighted corpora loaded so far:
+			* corpus_1: 32
+[2022-11-13 22:50:46,915 INFO] Weighted corpora loaded so far:
+			* corpus_1: 34
+[2022-11-13 22:50:46,922 INFO] Weighted corpora loaded so far:
+			* corpus_1: 33
+[2022-11-13 22:50:46,933 INFO] Weighted corpora loaded so far:
+			* corpus_1: 34
+[2022-11-13 22:50:47,021 INFO] Weighted corpora loaded so far:
+			* corpus_1: 35
+[2022-11-13 22:50:47,032 INFO] Weighted corpora loaded so far:
+			* corpus_1: 36
+[2022-11-13 22:50:47,041 INFO] Weighted corpora loaded so far:
+			* corpus_1: 35
+[2022-11-13 22:50:47,043 INFO] Weighted corpora loaded so far:
+			* corpus_1: 37
+[2022-11-13 22:50:47,052 INFO] Weighted corpora loaded so far:
+			* corpus_1: 36
+[2022-11-13 22:50:47,054 INFO] Weighted corpora loaded so far:
+			* corpus_1: 38
+[2022-11-13 22:50:47,061 INFO] Weighted corpora loaded so far:
+			* corpus_1: 37
+[2022-11-13 22:50:47,065 INFO] Weighted corpora loaded so far:
+			* corpus_1: 39
+[2022-11-13 22:50:47,072 INFO] Weighted corpora loaded so far:
+			* corpus_1: 38
+[2022-11-13 22:50:47,076 INFO] Weighted corpora loaded so far:
+			* corpus_1: 40
+[2022-11-13 22:50:47,082 INFO] Weighted corpora loaded so far:
+			* corpus_1: 39
+[2022-11-13 22:50:47,087 INFO] Weighted corpora loaded so far:
+			* corpus_1: 41
+[2022-11-13 22:50:47,093 INFO] Weighted corpora loaded so far:
+			* corpus_1: 40
+[2022-11-13 22:50:47,097 INFO] Weighted corpora loaded so far:
+			* corpus_1: 42
+[2022-11-13 22:50:47,104 INFO] Weighted corpora loaded so far:
+			* corpus_1: 41
+[2022-11-13 22:50:47,108 INFO] Weighted corpora loaded so far:
+			* corpus_1: 43
+[2022-11-13 22:50:47,115 INFO] Weighted corpora loaded so far:
+			* corpus_1: 42
+[2022-11-13 22:50:47,118 INFO] Weighted corpora loaded so far:
+			* corpus_1: 44
+[2022-11-13 22:50:47,126 INFO] Weighted corpora loaded so far:
+			* corpus_1: 43
+[2022-11-13 22:50:47,128 INFO] Weighted corpora loaded so far:
+			* corpus_1: 45
+[2022-11-13 22:50:47,137 INFO] Weighted corpora loaded so far:
+			* corpus_1: 44
+[2022-11-13 22:50:47,148 INFO] Weighted corpora loaded so far:
+			* corpus_1: 45
+[2022-11-13 22:50:47,255 INFO] Weighted corpora loaded so far:
+			* corpus_1: 46
+[2022-11-13 22:50:47,265 INFO] Weighted corpora loaded so far:
+			* corpus_1: 47
+[2022-11-13 22:50:47,275 INFO] Weighted corpora loaded so far:
+			* corpus_1: 48
+[2022-11-13 22:50:47,276 INFO] Weighted corpora loaded so far:
+			* corpus_1: 46
+[2022-11-13 22:50:47,286 INFO] Weighted corpora loaded so far:
+			* corpus_1: 49
+[2022-11-13 22:50:47,287 INFO] Weighted corpora loaded so far:
+			* corpus_1: 47
+[2022-11-13 22:50:47,297 INFO] Weighted corpora loaded so far:
+			* corpus_1: 50
+[2022-11-13 22:50:47,298 INFO] Weighted corpora loaded so far:
+			* corpus_1: 48
+[2022-11-13 22:50:47,307 INFO] Weighted corpora loaded so far:
+			* corpus_1: 51
+[2022-11-13 22:50:47,309 INFO] Weighted corpora loaded so far:
+			* corpus_1: 49
+[2022-11-13 22:50:47,317 INFO] Weighted corpora loaded so far:
+			* corpus_1: 52
+[2022-11-13 22:50:47,320 INFO] Weighted corpora loaded so far:
+			* corpus_1: 50
+[2022-11-13 22:50:47,328 INFO] Weighted corpora loaded so far:
+			* corpus_1: 53
+[2022-11-13 22:50:47,332 INFO] Weighted corpora loaded so far:
+			* corpus_1: 51
+[2022-11-13 22:50:47,339 INFO] Weighted corpora loaded so far:
+			* corpus_1: 54
+[2022-11-13 22:50:47,342 INFO] Weighted corpora loaded so far:
+			* corpus_1: 52
+[2022-11-13 22:50:47,349 INFO] Weighted corpora loaded so far:
+			* corpus_1: 55
+[2022-11-13 22:50:47,353 INFO] Weighted corpora loaded so far:
+			* corpus_1: 53
+[2022-11-13 22:50:47,359 INFO] Weighted corpora loaded so far:
+			* corpus_1: 56
+[2022-11-13 22:50:47,364 INFO] Weighted corpora loaded so far:
+			* corpus_1: 54
+[2022-11-13 22:50:47,370 INFO] Weighted corpora loaded so far:
+			* corpus_1: 57
+[2022-11-13 22:50:47,375 INFO] Weighted corpora loaded so far:
+			* corpus_1: 55
+[2022-11-13 22:50:47,381 INFO] Weighted corpora loaded so far:
+			* corpus_1: 58
+[2022-11-13 22:50:47,385 INFO] Weighted corpora loaded so far:
+			* corpus_1: 56
+[2022-11-13 22:50:47,396 INFO] Weighted corpora loaded so far:
+			* corpus_1: 57
+[2022-11-13 22:50:47,407 INFO] Weighted corpora loaded so far:
+			* corpus_1: 58
+[2022-11-13 22:50:47,551 INFO] Weighted corpora loaded so far:
+			* corpus_1: 59
+[2022-11-13 22:50:47,562 INFO] Weighted corpora loaded so far:
+			* corpus_1: 60
+[2022-11-13 22:50:47,566 INFO] Weighted corpora loaded so far:
+			* corpus_1: 59
+[2022-11-13 22:50:47,573 INFO] Weighted corpora loaded so far:
+			* corpus_1: 61
+[2022-11-13 22:50:47,577 INFO] Weighted corpora loaded so far:
+			* corpus_1: 60
+[2022-11-13 22:50:47,584 INFO] Weighted corpora loaded so far:
+			* corpus_1: 62
+[2022-11-13 22:50:47,588 INFO] Weighted corpora loaded so far:
+			* corpus_1: 61
+[2022-11-13 22:50:47,594 INFO] Weighted corpora loaded so far:
+			* corpus_1: 63
+[2022-11-13 22:50:47,599 INFO] Weighted corpora loaded so far:
+			* corpus_1: 62
+[2022-11-13 22:50:47,605 INFO] Weighted corpora loaded so far:
+			* corpus_1: 64
+[2022-11-13 22:50:47,610 INFO] Weighted corpora loaded so far:
+			* corpus_1: 63
+[2022-11-13 22:50:47,616 INFO] Weighted corpora loaded so far:
+			* corpus_1: 65
+[2022-11-13 22:50:47,621 INFO] Weighted corpora loaded so far:
+			* corpus_1: 64
+[2022-11-13 22:50:47,629 INFO] Weighted corpora loaded so far:
+			* corpus_1: 66
+[2022-11-13 22:50:47,632 INFO] Weighted corpora loaded so far:
+			* corpus_1: 65
+[2022-11-13 22:50:47,640 INFO] Weighted corpora loaded so far:
+			* corpus_1: 67
+[2022-11-13 22:50:47,643 INFO] Weighted corpora loaded so far:
+			* corpus_1: 66
+[2022-11-13 22:50:47,650 INFO] Weighted corpora loaded so far:
+			* corpus_1: 68
+[2022-11-13 22:50:47,654 INFO] Weighted corpora loaded so far:
+			* corpus_1: 67
+[2022-11-13 22:50:47,661 INFO] Weighted corpora loaded so far:
+			* corpus_1: 69
+[2022-11-13 22:50:47,665 INFO] Weighted corpora loaded so far:
+			* corpus_1: 68
+[2022-11-13 22:50:47,672 INFO] Weighted corpora loaded so far:
+			* corpus_1: 70
+[2022-11-13 22:50:47,676 INFO] Weighted corpora loaded so far:
+			* corpus_1: 69
+[2022-11-13 22:50:47,682 INFO] Weighted corpora loaded so far:
+			* corpus_1: 71
+[2022-11-13 22:50:47,687 INFO] Weighted corpora loaded so far:
+			* corpus_1: 70
+[2022-11-13 22:50:47,692 INFO] Weighted corpora loaded so far:
+			* corpus_1: 72
+[2022-11-13 22:50:47,697 INFO] Weighted corpora loaded so far:
+			* corpus_1: 71
+[2022-11-13 22:50:47,703 INFO] Weighted corpora loaded so far:
+			* corpus_1: 73
+[2022-11-13 22:50:47,708 INFO] Weighted corpora loaded so far:
+			* corpus_1: 72
+[2022-11-13 22:50:47,714 INFO] Weighted corpora loaded so far:
+			* corpus_1: 74
+[2022-11-13 22:50:47,719 INFO] Weighted corpora loaded so far:
+			* corpus_1: 73
+[2022-11-13 22:50:47,724 INFO] Weighted corpora loaded so far:
+			* corpus_1: 75
+[2022-11-13 22:50:47,729 INFO] Weighted corpora loaded so far:
+			* corpus_1: 74
+[2022-11-13 22:50:47,739 INFO] Weighted corpora loaded so far:
+			* corpus_1: 75
+[2022-11-13 22:50:47,912 INFO] Weighted corpora loaded so far:
+			* corpus_1: 76
+[2022-11-13 22:50:47,922 INFO] Weighted corpora loaded so far:
+			* corpus_1: 77
+[2022-11-13 22:50:47,927 INFO] Weighted corpora loaded so far:
+			* corpus_1: 76
+[2022-11-13 22:50:47,932 INFO] Weighted corpora loaded so far:
+			* corpus_1: 78
+[2022-11-13 22:50:47,938 INFO] Weighted corpora loaded so far:
+			* corpus_1: 77
+[2022-11-13 22:50:47,943 INFO] Weighted corpora loaded so far:
+			* corpus_1: 79
+[2022-11-13 22:50:47,949 INFO] Weighted corpora loaded so far:
+			* corpus_1: 78
+[2022-11-13 22:50:47,953 INFO] Weighted corpora loaded so far:
+			* corpus_1: 80
+[2022-11-13 22:50:47,960 INFO] Weighted corpora loaded so far:
+			* corpus_1: 79
+[2022-11-13 22:50:47,964 INFO] Weighted corpora loaded so far:
+			* corpus_1: 81
+[2022-11-13 22:50:47,971 INFO] Weighted corpora loaded so far:
+			* corpus_1: 80
+[2022-11-13 22:50:47,974 INFO] Weighted corpora loaded so far:
+			* corpus_1: 82
+[2022-11-13 22:50:47,982 INFO] Weighted corpora loaded so far:
+			* corpus_1: 81
+[2022-11-13 22:50:47,988 INFO] Weighted corpora loaded so far:
+			* corpus_1: 83
+[2022-11-13 22:50:47,993 INFO] Weighted corpora loaded so far:
+			* corpus_1: 82
+[2022-11-13 22:50:47,999 INFO] Weighted corpora loaded so far:
+			* corpus_1: 84
+[2022-11-13 22:50:48,004 INFO] Weighted corpora loaded so far:
+			* corpus_1: 83
+[2022-11-13 22:50:48,009 INFO] Weighted corpora loaded so far:
+			* corpus_1: 85
+[2022-11-13 22:50:48,015 INFO] Weighted corpora loaded so far:
+			* corpus_1: 84
+[2022-11-13 22:50:48,019 INFO] Weighted corpora loaded so far:
+			* corpus_1: 86
+[2022-11-13 22:50:48,025 INFO] Weighted corpora loaded so far:
+			* corpus_1: 85
+[2022-11-13 22:50:48,030 INFO] Weighted corpora loaded so far:
+			* corpus_1: 87
+[2022-11-13 22:50:48,036 INFO] Weighted corpora loaded so far:
+			* corpus_1: 86
+[2022-11-13 22:50:48,040 INFO] Weighted corpora loaded so far:
+			* corpus_1: 88
+[2022-11-13 22:50:48,047 INFO] Weighted corpora loaded so far:
+			* corpus_1: 87
+[2022-11-13 22:50:48,051 INFO] Weighted corpora loaded so far:
+			* corpus_1: 89
+[2022-11-13 22:50:48,058 INFO] Weighted corpora loaded so far:
+			* corpus_1: 88
+[2022-11-13 22:50:48,061 INFO] Weighted corpora loaded so far:
+			* corpus_1: 90
+[2022-11-13 22:50:48,069 INFO] Weighted corpora loaded so far:
+			* corpus_1: 89
+[2022-11-13 22:50:48,072 INFO] Weighted corpora loaded so far:
+			* corpus_1: 91
+[2022-11-13 22:50:48,079 INFO] Weighted corpora loaded so far:
+			* corpus_1: 90
+[2022-11-13 22:50:48,082 INFO] Weighted corpora loaded so far:
+			* corpus_1: 92
+[2022-11-13 22:50:48,090 INFO] Weighted corpora loaded so far:
+			* corpus_1: 91
+[2022-11-13 22:50:48,093 INFO] Weighted corpora loaded so far:
+			* corpus_1: 93
+[2022-11-13 22:50:48,101 INFO] Weighted corpora loaded so far:
+			* corpus_1: 92
+[2022-11-13 22:50:48,103 INFO] Weighted corpora loaded so far:
+			* corpus_1: 94
+[2022-11-13 22:50:48,112 INFO] Weighted corpora loaded so far:
+			* corpus_1: 93
+[2022-11-13 22:50:48,114 INFO] Weighted corpora loaded so far:
+			* corpus_1: 95
+[2022-11-13 22:50:48,122 INFO] Weighted corpora loaded so far:
+			* corpus_1: 94
+[2022-11-13 22:50:48,133 INFO] Weighted corpora loaded so far:
+			* corpus_1: 95
+[2022-11-13 22:50:48,349 INFO] Weighted corpora loaded so far:
+			* corpus_1: 96
+[2022-11-13 22:50:48,359 INFO] Weighted corpora loaded so far:
+			* corpus_1: 97
+[2022-11-13 22:50:48,370 INFO] Weighted corpora loaded so far:
+			* corpus_1: 98
+[2022-11-13 22:50:48,374 INFO] Weighted corpora loaded so far:
+			* corpus_1: 96
+[2022-11-13 22:50:48,381 INFO] Weighted corpora loaded so far:
+			* corpus_1: 99
+[2022-11-13 22:50:48,385 INFO] Weighted corpora loaded so far:
+			* corpus_1: 97
+[2022-11-13 22:50:48,391 INFO] Weighted corpora loaded so far:
+			* corpus_1: 100
+[2022-11-13 22:50:48,395 INFO] Weighted corpora loaded so far:
+			* corpus_1: 98
+[2022-11-13 22:50:48,401 INFO] Weighted corpora loaded so far:
+			* corpus_1: 101
+[2022-11-13 22:50:48,406 INFO] Weighted corpora loaded so far:
+			* corpus_1: 99
+[2022-11-13 22:50:48,412 INFO] Weighted corpora loaded so far:
+			* corpus_1: 102
+[2022-11-13 22:50:48,417 INFO] Weighted corpora loaded so far:
+			* corpus_1: 100
+[2022-11-13 22:50:48,423 INFO] Weighted corpora loaded so far:
+			* corpus_1: 103
+[2022-11-13 22:50:48,427 INFO] Weighted corpora loaded so far:
+			* corpus_1: 101
+[2022-11-13 22:50:48,434 INFO] Weighted corpora loaded so far:
+			* corpus_1: 104
+[2022-11-13 22:50:48,437 INFO] Weighted corpora loaded so far:
+			* corpus_1: 102
+[2022-11-13 22:50:48,445 INFO] Weighted corpora loaded so far:
+			* corpus_1: 105
+[2022-11-13 22:50:48,448 INFO] Weighted corpora loaded so far:
+			* corpus_1: 103
+[2022-11-13 22:50:48,456 INFO] Weighted corpora loaded so far:
+			* corpus_1: 106
+[2022-11-13 22:50:48,459 INFO] Weighted corpora loaded so far:
+			* corpus_1: 104
+[2022-11-13 22:50:48,467 INFO] Weighted corpora loaded so far:
+			* corpus_1: 107
+[2022-11-13 22:50:48,469 INFO] Weighted corpora loaded so far:
+			* corpus_1: 105
+[2022-11-13 22:50:48,477 INFO] Weighted corpora loaded so far:
+			* corpus_1: 108
+[2022-11-13 22:50:48,480 INFO] Weighted corpora loaded so far:
+			* corpus_1: 106
+[2022-11-13 22:50:48,491 INFO] Weighted corpora loaded so far:
+			* corpus_1: 107
+[2022-11-13 22:50:48,502 INFO] Weighted corpora loaded so far:
+			* corpus_1: 108
+[2022-11-13 22:51:08,806 INFO] Step 244/24420; acc: 59.2; ppl:   4.7; xent: 1.5; lr: 1.00000; sents:    4880; bsz:  112/ 145/20; 1218/1567 tok/s;     23 sec;
+[2022-11-13 22:51:09,150 INFO] Train perplexity: 4.6904
+[2022-11-13 22:51:09,150 INFO] Train accuracy: 59.2177
+[2022-11-13 22:51:09,150 INFO] Sentences processed: 4880
+[2022-11-13 22:51:09,150 INFO] Average bsz:  112/ 145/20
+[2022-11-13 22:51:09,151 INFO] Validation perplexity: 4.55845
+[2022-11-13 22:51:09,151 INFO] Validation accuracy: 65.9028
+[2022-11-13 22:51:25,733 INFO] Step 488/24420; acc: 93.9; ppl:   1.3; xent: 0.2; lr: 1.00000; sents:    4880; bsz:  111/ 142/20; 1606/2041 tok/s;     39 sec;
+[2022-11-13 22:51:26,086 INFO] Train perplexity: 2.46309
+[2022-11-13 22:51:26,087 INFO] Train accuracy: 76.3807
+[2022-11-13 22:51:26,087 INFO] Sentences processed: 9760
+[2022-11-13 22:51:26,087 INFO] Average bsz:  112/ 143/20
+[2022-11-13 22:51:26,088 INFO] Validation perplexity: 3.0105
+[2022-11-13 22:51:26,088 INFO] Validation accuracy: 72.9167
+[2022-11-13 22:51:43,125 INFO] Step 732/24420; acc: 96.6; ppl:   1.2; xent: 0.2; lr: 1.00000; sents:    4880; bsz:  118/ 150/20; 1651/2104 tok/s;     57 sec;
+[2022-11-13 22:51:43,472 INFO] Train perplexity: 1.90515
+[2022-11-13 22:51:43,472 INFO] Train accuracy: 83.3224
+[2022-11-13 22:51:43,472 INFO] Sentences processed: 14640
+[2022-11-13 22:51:43,472 INFO] Average bsz:  114/ 145/20
+[2022-11-13 22:51:43,473 INFO] Validation perplexity: 3.66206
+[2022-11-13 22:51:43,473 INFO] Validation accuracy: 71.1111
+[2022-11-13 22:52:00,206 INFO] Step 976/24420; acc: 97.4; ppl:   1.1; xent: 0.1; lr: 1.00000; sents:    4880; bsz:  110/ 143/20; 1576/2045 tok/s;     74 sec;
+[2022-11-13 22:52:00,577 INFO] Train perplexity: 1.66956
+[2022-11-13 22:52:00,577 INFO] Train accuracy: 86.7915
+[2022-11-13 22:52:00,577 INFO] Sentences processed: 19520
+[2022-11-13 22:52:00,578 INFO] Average bsz:  113/ 145/20
+[2022-11-13 22:52:00,578 INFO] Validation perplexity: 2.50507
+[2022-11-13 22:52:00,578 INFO] Validation accuracy: 76.9444
+[2022-11-13 22:52:16,996 INFO] Step 1220/24420; acc: 97.8; ppl:   1.1; xent: 0.1; lr: 1.00000; sents:    4880; bsz:  105/ 137/20; 1533/1994 tok/s;     91 sec;
+[2022-11-13 22:52:17,337 INFO] Train perplexity: 1.53688
+[2022-11-13 22:52:17,338 INFO] Train accuracy: 88.9092
+[2022-11-13 22:52:17,338 INFO] Sentences processed: 24400
+[2022-11-13 22:52:17,338 INFO] Average bsz:  111/ 143/20
+[2022-11-13 22:52:17,339 INFO] Validation perplexity: 2.11107
+[2022-11-13 22:52:17,339 INFO] Validation accuracy: 79.0278
+[2022-11-13 22:52:34,562 INFO] Step 1464/24420; acc: 98.4; ppl:   1.1; xent: 0.1; lr: 1.00000; sents:    4880; bsz:  120/ 154/20; 1661/2145 tok/s;    108 sec;
+[2022-11-13 22:52:34,870 INFO] Train perplexity: 1.44115
+[2022-11-13 22:52:34,870 INFO] Train accuracy: 90.5963
+[2022-11-13 22:52:34,871 INFO] Sentences processed: 29280
+[2022-11-13 22:52:34,871 INFO] Average bsz:  113/ 145/20
+[2022-11-13 22:52:34,872 INFO] Validation perplexity: 1.79165
+[2022-11-13 22:52:34,872 INFO] Validation accuracy: 83.2639
+[2022-11-13 22:52:52,074 INFO] Step 1708/24420; acc: 99.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  122/ 153/20; 1703/2137 tok/s;    126 sec;
+[2022-11-13 22:52:52,433 INFO] Train perplexity: 1.3732
+[2022-11-13 22:52:52,433 INFO] Train accuracy: 91.8483
+[2022-11-13 22:52:52,433 INFO] Sentences processed: 34160
+[2022-11-13 22:52:52,434 INFO] Average bsz:  114/ 146/20
+[2022-11-13 22:52:52,434 INFO] Validation perplexity: 1.6232
+[2022-11-13 22:52:52,435 INFO] Validation accuracy: 86.6667
+[2022-11-13 22:53:09,437 INFO] Step 1952/24420; acc: 99.1; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  115/ 148/20; 1612/2082 tok/s;    143 sec;
+[2022-11-13 22:53:09,745 INFO] Train perplexity: 1.32534
+[2022-11-13 22:53:09,746 INFO] Train accuracy: 92.765
+[2022-11-13 22:53:09,746 INFO] Sentences processed: 39040
+[2022-11-13 22:53:09,746 INFO] Average bsz:  114/ 147/20
+[2022-11-13 22:53:09,747 INFO] Validation perplexity: 1.89563
+[2022-11-13 22:53:09,747 INFO] Validation accuracy: 84.9306
+[2022-11-13 22:53:26,656 INFO] Step 2196/24420; acc: 99.2; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  114/ 145/20; 1616/2052 tok/s;    160 sec;
+[2022-11-13 22:53:26,941 INFO] Train perplexity: 1.28915
+[2022-11-13 22:53:26,941 INFO] Train accuracy: 93.4734
+[2022-11-13 22:53:26,941 INFO] Sentences processed: 43920
+[2022-11-13 22:53:26,941 INFO] Average bsz:  114/ 146/20
+[2022-11-13 22:53:26,942 INFO] Validation perplexity: 1.28731
+[2022-11-13 22:53:26,943 INFO] Validation accuracy: 93.0556
+[2022-11-13 22:53:43,985 INFO] Step 2440/24420; acc: 99.4; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  117/ 149/20; 1651/2103 tok/s;    178 sec;
+[2022-11-13 22:53:44,285 INFO] Train perplexity: 1.25965
+[2022-11-13 22:53:44,285 INFO] Train accuracy: 94.0746
+[2022-11-13 22:53:44,285 INFO] Sentences processed: 48800
+[2022-11-13 22:53:44,285 INFO] Average bsz:  114/ 147/20
+[2022-11-13 22:53:44,286 INFO] Validation perplexity: 1.35081
+[2022-11-13 22:53:44,286 INFO] Validation accuracy: 93.1944
+[2022-11-13 22:54:01,484 INFO] Step 2684/24420; acc: 99.5; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  117/ 148/20; 1628/2069 tok/s;    195 sec;
+[2022-11-13 22:54:01,831 INFO] Train perplexity: 1.23568
+[2022-11-13 22:54:01,832 INFO] Train accuracy: 94.5748
+[2022-11-13 22:54:01,832 INFO] Sentences processed: 53680
+[2022-11-13 22:54:01,832 INFO] Average bsz:  115/ 147/20
+[2022-11-13 22:54:01,833 INFO] Validation perplexity: 1.57625
+[2022-11-13 22:54:01,833 INFO] Validation accuracy: 89.8611
+[2022-11-13 22:54:18,993 INFO] Step 2928/24420; acc: 99.5; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  118/ 152/20; 1646/2124 tok/s;    213 sec;
+[2022-11-13 22:54:19,348 INFO] Train perplexity: 1.21541
+[2022-11-13 22:54:19,348 INFO] Train accuracy: 95.0026
+[2022-11-13 22:54:19,348 INFO] Sentences processed: 58560
+[2022-11-13 22:54:19,348 INFO] Average bsz:  115/ 147/20
+[2022-11-13 22:54:19,349 INFO] Validation perplexity: 1.42599
+[2022-11-13 22:54:19,349 INFO] Validation accuracy: 91.4583
+[2022-11-13 22:54:36,139 INFO] Step 3172/24420; acc: 99.4; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  111/ 143/20; 1583/2039 tok/s;    230 sec;
+[2022-11-13 22:54:36,480 INFO] Train perplexity: 1.19987
+[2022-11-13 22:54:36,480 INFO] Train accuracy: 95.3324
+[2022-11-13 22:54:36,480 INFO] Sentences processed: 63440
+[2022-11-13 22:54:36,480 INFO] Average bsz:  115/ 147/20
+[2022-11-13 22:54:36,481 INFO] Validation perplexity: 1.22063
+[2022-11-13 22:54:36,481 INFO] Validation accuracy: 95.7639
+[2022-11-13 22:54:50,411 INFO] Step 3416/24420; acc: 99.7; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  113/ 144/20; 1924/2460 tok/s;    244 sec;
+[2022-11-13 22:54:50,760 INFO] Train perplexity: 1.18566
+[2022-11-13 22:54:50,761 INFO] Train accuracy: 95.6375
+[2022-11-13 22:54:50,761 INFO] Sentences processed: 68320
+[2022-11-13 22:54:50,761 INFO] Average bsz:  115/ 147/20
+[2022-11-13 22:54:50,762 INFO] Validation perplexity: 1.14215
+[2022-11-13 22:54:50,762 INFO] Validation accuracy: 97.7083
+[2022-11-13 22:55:07,317 INFO] Step 3660/24420; acc: 99.6; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  111/ 143/20; 1597/2057 tok/s;    261 sec;
+[2022-11-13 22:55:07,693 INFO] Train perplexity: 1.17373
+[2022-11-13 22:55:07,694 INFO] Train accuracy: 95.8978
+[2022-11-13 22:55:07,694 INFO] Sentences processed: 73200
+[2022-11-13 22:55:07,694 INFO] Average bsz:  114/ 146/20
+[2022-11-13 22:55:07,694 INFO] Validation perplexity: 1.07555
+[2022-11-13 22:55:07,695 INFO] Validation accuracy: 98.8889
+[2022-11-13 22:55:24,856 INFO] Step 3904/24420; acc: 99.6; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4853; bsz:  116/ 148/20; 1607/2058 tok/s;    279 sec;
+[2022-11-13 22:55:25,212 INFO] Train perplexity: 1.16414
+[2022-11-13 22:55:25,212 INFO] Train accuracy: 96.1321
+[2022-11-13 22:55:25,212 INFO] Sentences processed: 78053
+[2022-11-13 22:55:25,212 INFO] Average bsz:  114/ 147/20
+[2022-11-13 22:55:25,213 INFO] Validation perplexity: 1.14341
+[2022-11-13 22:55:25,214 INFO] Validation accuracy: 97.7083
+[2022-11-13 22:55:41,808 INFO] Step 4148/24420; acc: 99.8; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  109/ 139/20; 1566/1998 tok/s;    296 sec;
+[2022-11-13 22:55:42,110 INFO] Train perplexity: 1.15501
+[2022-11-13 22:55:42,110 INFO] Train accuracy: 96.3365
+[2022-11-13 22:55:42,110 INFO] Sentences processed: 82933
+[2022-11-13 22:55:42,111 INFO] Average bsz:  114/ 146/20
+[2022-11-13 22:55:42,111 INFO] Validation perplexity: 1.13338
+[2022-11-13 22:55:42,111 INFO] Validation accuracy: 97.9167
+[2022-11-13 22:55:58,996 INFO] Step 4392/24420; acc: 99.7; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  113/ 144/20; 1605/2048 tok/s;    313 sec;
+[2022-11-13 22:55:59,322 INFO] Train perplexity: 1.14686
+[2022-11-13 22:55:59,323 INFO] Train accuracy: 96.5209
+[2022-11-13 22:55:59,323 INFO] Sentences processed: 87813
+[2022-11-13 22:55:59,323 INFO] Average bsz:  114/ 146/20
+[2022-11-13 22:55:59,324 INFO] Validation perplexity: 1.11333
+[2022-11-13 22:55:59,324 INFO] Validation accuracy: 98.6111
+[2022-11-13 22:56:16,413 INFO] Step 4636/24420; acc: 99.8; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  117/ 151/20; 1644/2110 tok/s;    330 sec;
+[2022-11-13 22:56:16,733 INFO] Train perplexity: 1.13906
+[2022-11-13 22:56:16,733 INFO] Train accuracy: 96.6968
+[2022-11-13 22:56:16,733 INFO] Sentences processed: 92693
+[2022-11-13 22:56:16,733 INFO] Average bsz:  114/ 146/20
+[2022-11-13 22:56:16,734 INFO] Validation perplexity: 1.11585
+[2022-11-13 22:56:16,734 INFO] Validation accuracy: 98.6111
+[2022-11-13 22:56:33,563 INFO] Step 4880/24420; acc: 99.8; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  115/ 147/20; 1633/2096 tok/s;    347 sec;
+[2022-11-13 22:56:33,910 INFO] Train perplexity: 1.132
+[2022-11-13 22:56:33,911 INFO] Train accuracy: 96.855
+[2022-11-13 22:56:33,911 INFO] Sentences processed: 97573
+[2022-11-13 22:56:33,911 INFO] Average bsz:  114/ 146/20
+[2022-11-13 22:56:33,912 INFO] Validation perplexity: 1.11286
+[2022-11-13 22:56:33,912 INFO] Validation accuracy: 98.4722
+[2022-11-13 22:56:51,056 INFO] Step 5124/24420; acc: 99.8; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  119/ 151/20; 1660/2101 tok/s;    365 sec;
+[2022-11-13 22:56:51,410 INFO] Train perplexity: 1.12567
+[2022-11-13 22:56:51,410 INFO] Train accuracy: 97.0009
+[2022-11-13 22:56:51,410 INFO] Sentences processed: 102453
+[2022-11-13 22:56:51,410 INFO] Average bsz:  114/ 147/20
+[2022-11-13 22:56:51,411 INFO] Validation perplexity: 1.08268
+[2022-11-13 22:56:51,411 INFO] Validation accuracy: 98.8889
+[2022-11-13 22:57:08,121 INFO] Step 5368/24420; acc: 99.8; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  112/ 142/20; 1602/2025 tok/s;    382 sec;
+[2022-11-13 22:57:08,492 INFO] Train perplexity: 1.12034
+[2022-11-13 22:57:08,492 INFO] Train accuracy: 97.1241
+[2022-11-13 22:57:08,492 INFO] Sentences processed: 107333
+[2022-11-13 22:57:08,492 INFO] Average bsz:  114/ 146/20
+[2022-11-13 22:57:08,493 INFO] Validation perplexity: 1.10818
+[2022-11-13 22:57:08,494 INFO] Validation accuracy: 98.4722
+[2022-11-13 22:57:25,446 INFO] Step 5612/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  115/ 148/20; 1624/2078 tok/s;    399 sec;
+[2022-11-13 22:57:25,825 INFO] Train perplexity: 1.11501
+[2022-11-13 22:57:25,826 INFO] Train accuracy: 97.2454
+[2022-11-13 22:57:25,826 INFO] Sentences processed: 112213
+[2022-11-13 22:57:25,826 INFO] Average bsz:  114/ 146/20
+[2022-11-13 22:57:25,826 INFO] Validation perplexity: 1.09942
+[2022-11-13 22:57:25,827 INFO] Validation accuracy: 98.4722
+[2022-11-13 22:57:43,006 INFO] Step 5856/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  118/ 150/20; 1633/2085 tok/s;    417 sec;
+[2022-11-13 22:57:43,358 INFO] Train perplexity: 1.10999
+[2022-11-13 22:57:43,359 INFO] Train accuracy: 97.3611
+[2022-11-13 22:57:43,359 INFO] Sentences processed: 117093
+[2022-11-13 22:57:43,359 INFO] Average bsz:  114/ 146/20
+[2022-11-13 22:57:43,360 INFO] Validation perplexity: 1.07692
+[2022-11-13 22:57:43,360 INFO] Validation accuracy: 98.8194
+[2022-11-13 22:58:00,100 INFO] Step 6100/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  112/ 145/20; 1596/2064 tok/s;    434 sec;
+[2022-11-13 22:58:00,372 INFO] Train perplexity: 1.10564
+[2022-11-13 22:58:00,373 INFO] Train accuracy: 97.4601
+[2022-11-13 22:58:00,373 INFO] Sentences processed: 121973
+[2022-11-13 22:58:00,373 INFO] Average bsz:  114/ 146/20
+[2022-11-13 22:58:00,373 INFO] Validation perplexity: 1.0883
+[2022-11-13 22:58:00,374 INFO] Validation accuracy: 98.8889
+[2022-11-13 22:58:17,384 INFO] Step 6344/24420; acc: 99.7; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  116/ 146/20; 1633/2062 tok/s;    451 sec;
+[2022-11-13 22:58:17,683 INFO] Train perplexity: 1.10249
+[2022-11-13 22:58:17,683 INFO] Train accuracy: 97.5473
+[2022-11-13 22:58:17,683 INFO] Sentences processed: 126853
+[2022-11-13 22:58:17,683 INFO] Average bsz:  114/ 146/20
+[2022-11-13 22:58:17,684 INFO] Validation perplexity: 1.08156
+[2022-11-13 22:58:17,685 INFO] Validation accuracy: 99.0972
+[2022-11-13 22:58:34,735 INFO] Step 6588/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  116/ 150/20; 1632/2104 tok/s;    468 sec;
+[2022-11-13 22:58:35,072 INFO] Train perplexity: 1.09866
+[2022-11-13 22:58:35,073 INFO] Train accuracy: 97.636
+[2022-11-13 22:58:35,073 INFO] Sentences processed: 131733
+[2022-11-13 22:58:35,073 INFO] Average bsz:  114/ 147/20
+[2022-11-13 22:58:35,074 INFO] Validation perplexity: 1.08739
+[2022-11-13 22:58:35,074 INFO] Validation accuracy: 98.9583
+[2022-11-13 22:58:52,010 INFO] Step 6832/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  112/ 146/20; 1577/2065 tok/s;    486 sec;
+[2022-11-13 22:58:52,350 INFO] Train perplexity: 1.09519
+[2022-11-13 22:58:52,350 INFO] Train accuracy: 97.7171
+[2022-11-13 22:58:52,350 INFO] Sentences processed: 136613
+[2022-11-13 22:58:52,350 INFO] Average bsz:  114/ 147/20
+[2022-11-13 22:58:52,351 INFO] Validation perplexity: 1.08076
+[2022-11-13 22:58:52,352 INFO] Validation accuracy: 99.1667
+[2022-11-13 22:59:09,308 INFO] Step 7076/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  111/ 144/20; 1571/2037 tok/s;    503 sec;
+[2022-11-13 22:59:09,639 INFO] Train perplexity: 1.09189
+[2022-11-13 22:59:09,639 INFO] Train accuracy: 97.7932
+[2022-11-13 22:59:09,640 INFO] Sentences processed: 141493
+[2022-11-13 22:59:09,640 INFO] Average bsz:  114/ 146/20
+[2022-11-13 22:59:09,641 INFO] Validation perplexity: 1.08069
+[2022-11-13 22:59:09,641 INFO] Validation accuracy: 98.8889
+[2022-11-13 22:59:26,806 INFO] Step 7320/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  119/ 152/20; 1659/2119 tok/s;    521 sec;
+[2022-11-13 22:59:27,141 INFO] Train perplexity: 1.08865
+[2022-11-13 22:59:27,141 INFO] Train accuracy: 97.868
+[2022-11-13 22:59:27,142 INFO] Sentences processed: 146373
+[2022-11-13 22:59:27,142 INFO] Average bsz:  114/ 147/20
+[2022-11-13 22:59:27,143 INFO] Validation perplexity: 1.0928
+[2022-11-13 22:59:27,143 INFO] Validation accuracy: 98.9583
+[2022-11-13 22:59:44,019 INFO] Step 7564/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  117/ 148/20; 1655/2101 tok/s;    538 sec;
+[2022-11-13 22:59:44,392 INFO] Train perplexity: 1.08572
+[2022-11-13 22:59:44,392 INFO] Train accuracy: 97.9358
+[2022-11-13 22:59:44,392 INFO] Sentences processed: 151253
+[2022-11-13 22:59:44,393 INFO] Average bsz:  115/ 147/20
+[2022-11-13 22:59:44,393 INFO] Validation perplexity: 1.08696
+[2022-11-13 22:59:44,393 INFO] Validation accuracy: 98.9583
+[2022-11-13 23:00:01,364 INFO] Step 7808/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  117/ 148/20; 1652/2086 tok/s;    555 sec;
+[2022-11-13 23:00:01,745 INFO] Train perplexity: 1.08323
+[2022-11-13 23:00:01,745 INFO] Train accuracy: 97.9964
+[2022-11-13 23:00:01,745 INFO] Sentences processed: 156133
+[2022-11-13 23:00:01,745 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:00:01,746 INFO] Validation perplexity: 1.06755
+[2022-11-13 23:00:01,746 INFO] Validation accuracy: 99.4444
+[2022-11-13 23:00:18,504 INFO] Step 8052/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  112/ 144/20; 1591/2044 tok/s;    572 sec;
+[2022-11-13 23:00:18,816 INFO] Train perplexity: 1.08093
+[2022-11-13 23:00:18,816 INFO] Train accuracy: 98.0516
+[2022-11-13 23:00:18,816 INFO] Sentences processed: 161013
+[2022-11-13 23:00:18,817 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:00:18,817 INFO] Validation perplexity: 1.06501
+[2022-11-13 23:00:18,817 INFO] Validation accuracy: 99.2361
+[2022-11-13 23:00:35,388 INFO] Step 8296/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  108/ 139/20; 1558/2004 tok/s;    589 sec;
+[2022-11-13 23:00:35,738 INFO] Train perplexity: 1.07868
+[2022-11-13 23:00:35,738 INFO] Train accuracy: 98.1036
+[2022-11-13 23:00:35,738 INFO] Sentences processed: 165893
+[2022-11-13 23:00:35,738 INFO] Average bsz:  114/ 146/20
+[2022-11-13 23:00:35,739 INFO] Validation perplexity: 1.06445
+[2022-11-13 23:00:35,739 INFO] Validation accuracy: 99.3056
+[2022-11-13 23:00:52,896 INFO] Step 8540/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  116/ 149/20; 1620/2076 tok/s;    607 sec;
+[2022-11-13 23:00:53,233 INFO] Train perplexity: 1.07646
+[2022-11-13 23:00:53,233 INFO] Train accuracy: 98.1566
+[2022-11-13 23:00:53,234 INFO] Sentences processed: 170773
+[2022-11-13 23:00:53,234 INFO] Average bsz:  114/ 146/20
+[2022-11-13 23:00:53,234 INFO] Validation perplexity: 1.06412
+[2022-11-13 23:00:53,234 INFO] Validation accuracy: 99.3056
+[2022-11-13 23:01:10,536 INFO] Step 8784/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  120/ 150/20; 1653/2073 tok/s;    624 sec;
+[2022-11-13 23:01:10,882 INFO] Train perplexity: 1.07429
+[2022-11-13 23:01:10,883 INFO] Train accuracy: 98.2074
+[2022-11-13 23:01:10,883 INFO] Sentences processed: 175653
+[2022-11-13 23:01:10,883 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:01:10,884 INFO] Validation perplexity: 1.06728
+[2022-11-13 23:01:10,884 INFO] Validation accuracy: 99.375
+[2022-11-13 23:01:27,648 INFO] Step 9028/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  112/ 142/20; 1595/2026 tok/s;    641 sec;
+[2022-11-13 23:01:27,999 INFO] Train perplexity: 1.07235
+[2022-11-13 23:01:27,999 INFO] Train accuracy: 98.2531
+[2022-11-13 23:01:27,999 INFO] Sentences processed: 180533
+[2022-11-13 23:01:27,999 INFO] Average bsz:  114/ 146/20
+[2022-11-13 23:01:28,000 INFO] Validation perplexity: 1.07086
+[2022-11-13 23:01:28,001 INFO] Validation accuracy: 99.2361
+[2022-11-13 23:01:45,188 INFO] Step 9272/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  121/ 151/20; 1680/2104 tok/s;    659 sec;
+[2022-11-13 23:01:45,533 INFO] Train perplexity: 1.07036
+[2022-11-13 23:01:45,533 INFO] Train accuracy: 98.2997
+[2022-11-13 23:01:45,533 INFO] Sentences processed: 185413
+[2022-11-13 23:01:45,533 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:01:45,534 INFO] Validation perplexity: 1.07304
+[2022-11-13 23:01:45,534 INFO] Validation accuracy: 99.375
+[2022-11-13 23:02:02,636 INFO] Step 9516/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  120/ 151/20; 1673/2109 tok/s;    676 sec;
+[2022-11-13 23:02:02,960 INFO] Train perplexity: 1.06848
+[2022-11-13 23:02:02,961 INFO] Train accuracy: 98.3438
+[2022-11-13 23:02:02,961 INFO] Sentences processed: 190293
+[2022-11-13 23:02:02,961 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:02:02,962 INFO] Validation perplexity: 1.08351
+[2022-11-13 23:02:02,962 INFO] Validation accuracy: 99.0278
+[2022-11-13 23:02:20,106 INFO] Step 9760/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  118/ 150/20; 1650/2098 tok/s;    694 sec;
+[2022-11-13 23:02:20,466 INFO] Train perplexity: 1.0667
+[2022-11-13 23:02:20,467 INFO] Train accuracy: 98.3855
+[2022-11-13 23:02:20,467 INFO] Sentences processed: 195173
+[2022-11-13 23:02:20,467 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:02:20,468 INFO] Validation perplexity: 1.0801
+[2022-11-13 23:02:20,468 INFO] Validation accuracy: 99.0972
+[2022-11-13 23:02:34,530 INFO] Step 10004/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  119/ 151/20; 2012/2549 tok/s;    708 sec;
+[2022-11-13 23:02:34,845 INFO] Train perplexity: 1.06502
+[2022-11-13 23:02:34,845 INFO] Train accuracy: 98.4247
+[2022-11-13 23:02:34,845 INFO] Sentences processed: 200053
+[2022-11-13 23:02:34,846 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:02:34,846 INFO] Validation perplexity: 1.07429
+[2022-11-13 23:02:34,846 INFO] Validation accuracy: 99.4444
+[2022-11-13 23:02:51,765 INFO] Step 10248/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  115/ 145/20; 1631/2059 tok/s;    725 sec;
+[2022-11-13 23:02:52,110 INFO] Train perplexity: 1.0635
+[2022-11-13 23:02:52,110 INFO] Train accuracy: 98.4606
+[2022-11-13 23:02:52,110 INFO] Sentences processed: 204933
+[2022-11-13 23:02:52,111 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:02:52,111 INFO] Validation perplexity: 1.07301
+[2022-11-13 23:02:52,112 INFO] Validation accuracy: 99.375
+[2022-11-13 23:03:09,296 INFO] Step 10492/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  119/ 150/20; 1653/2086 tok/s;    743 sec;
+[2022-11-13 23:03:09,611 INFO] Train perplexity: 1.06211
+[2022-11-13 23:03:09,612 INFO] Train accuracy: 98.4954
+[2022-11-13 23:03:09,612 INFO] Sentences processed: 209813
+[2022-11-13 23:03:09,612 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:03:09,613 INFO] Validation perplexity: 1.09143
+[2022-11-13 23:03:09,613 INFO] Validation accuracy: 98.8194
+[2022-11-13 23:03:26,621 INFO] Step 10736/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  114/ 146/20; 1611/2056 tok/s;    760 sec;
+[2022-11-13 23:03:26,950 INFO] Train perplexity: 1.06082
+[2022-11-13 23:03:26,951 INFO] Train accuracy: 98.5276
+[2022-11-13 23:03:26,951 INFO] Sentences processed: 214693
+[2022-11-13 23:03:26,951 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:03:26,952 INFO] Validation perplexity: 1.07648
+[2022-11-13 23:03:26,952 INFO] Validation accuracy: 99.0972
+[2022-11-13 23:03:43,842 INFO] Step 10980/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  115/ 147/20; 1631/2080 tok/s;    778 sec;
+[2022-11-13 23:03:44,193 INFO] Train perplexity: 1.05949
+[2022-11-13 23:03:44,194 INFO] Train accuracy: 98.5591
+[2022-11-13 23:03:44,194 INFO] Sentences processed: 219573
+[2022-11-13 23:03:44,194 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:03:44,195 INFO] Validation perplexity: 1.07797
+[2022-11-13 23:03:44,195 INFO] Validation accuracy: 99.3056
+[2022-11-13 23:04:00,820 INFO] Step 11224/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  112/ 142/20; 1603/2042 tok/s;    795 sec;
+[2022-11-13 23:04:01,193 INFO] Train perplexity: 1.05829
+[2022-11-13 23:04:01,193 INFO] Train accuracy: 98.5879
+[2022-11-13 23:04:01,193 INFO] Sentences processed: 224453
+[2022-11-13 23:04:01,194 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:04:01,194 INFO] Validation perplexity: 1.10101
+[2022-11-13 23:04:01,195 INFO] Validation accuracy: 98.75
+[2022-11-13 23:04:18,099 INFO] Step 11468/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  115/ 147/20; 1618/2077 tok/s;    812 sec;
+[2022-11-13 23:04:18,380 INFO] Train perplexity: 1.05704
+[2022-11-13 23:04:18,380 INFO] Train accuracy: 98.6172
+[2022-11-13 23:04:18,380 INFO] Sentences processed: 229333
+[2022-11-13 23:04:18,380 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:04:18,381 INFO] Validation perplexity: 1.09917
+[2022-11-13 23:04:18,381 INFO] Validation accuracy: 98.8194
+[2022-11-13 23:04:35,628 INFO] Step 11712/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  121/ 154/20; 1691/2138 tok/s;    829 sec;
+[2022-11-13 23:04:35,975 INFO] Train perplexity: 1.05582
+[2022-11-13 23:04:35,975 INFO] Train accuracy: 98.6463
+[2022-11-13 23:04:35,975 INFO] Sentences processed: 234213
+[2022-11-13 23:04:35,975 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:04:35,976 INFO] Validation perplexity: 1.096
+[2022-11-13 23:04:35,976 INFO] Validation accuracy: 99.0972
+[2022-11-13 23:04:52,904 INFO] Step 11956/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  111/ 143/20; 1563/2020 tok/s;    847 sec;
+[2022-11-13 23:04:53,251 INFO] Train perplexity: 1.05471
+[2022-11-13 23:04:53,252 INFO] Train accuracy: 98.6726
+[2022-11-13 23:04:53,252 INFO] Sentences processed: 239093
+[2022-11-13 23:04:53,252 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:04:53,252 INFO] Validation perplexity: 1.11085
+[2022-11-13 23:04:53,253 INFO] Validation accuracy: 98.8889
+[2022-11-13 23:05:10,257 INFO] Step 12200/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  115/ 147/20; 1615/2065 tok/s;    864 sec;
+[2022-11-13 23:05:10,632 INFO] Train perplexity: 1.05367
+[2022-11-13 23:05:10,633 INFO] Train accuracy: 98.6976
+[2022-11-13 23:05:10,633 INFO] Sentences processed: 243973
+[2022-11-13 23:05:10,633 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:05:10,633 INFO] Validation perplexity: 1.12645
+[2022-11-13 23:05:10,634 INFO] Validation accuracy: 98.8194
+[2022-11-13 23:05:27,647 INFO] Step 12444/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  117/ 148/20; 1644/2070 tok/s;    881 sec;
+[2022-11-13 23:05:28,020 INFO] Train perplexity: 1.05265
+[2022-11-13 23:05:28,021 INFO] Train accuracy: 98.7223
+[2022-11-13 23:05:28,021 INFO] Sentences processed: 248853
+[2022-11-13 23:05:28,021 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:05:28,022 INFO] Validation perplexity: 1.08352
+[2022-11-13 23:05:28,022 INFO] Validation accuracy: 99.4444
+[2022-11-13 23:05:45,029 INFO] Step 12688/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  114/ 149/20; 1595/2094 tok/s;    899 sec;
+[2022-11-13 23:05:45,407 INFO] Train perplexity: 1.05171
+[2022-11-13 23:05:45,407 INFO] Train accuracy: 98.7457
+[2022-11-13 23:05:45,407 INFO] Sentences processed: 253733
+[2022-11-13 23:05:45,407 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:05:45,408 INFO] Validation perplexity: 1.10351
+[2022-11-13 23:05:45,409 INFO] Validation accuracy: 99.2361
+[2022-11-13 23:06:02,322 INFO] Step 12932/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  112/ 145/20; 1586/2044 tok/s;    916 sec;
+[2022-11-13 23:06:02,687 INFO] Train perplexity: 1.05081
+[2022-11-13 23:06:02,687 INFO] Train accuracy: 98.7677
+[2022-11-13 23:06:02,687 INFO] Sentences processed: 258613
+[2022-11-13 23:06:02,687 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:06:02,688 INFO] Validation perplexity: 1.08476
+[2022-11-13 23:06:02,688 INFO] Validation accuracy: 99.5139
+[2022-11-13 23:06:19,709 INFO] Step 13176/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  117/ 148/20; 1636/2077 tok/s;    933 sec;
+[2022-11-13 23:06:20,066 INFO] Train perplexity: 1.04987
+[2022-11-13 23:06:20,067 INFO] Train accuracy: 98.79
+[2022-11-13 23:06:20,067 INFO] Sentences processed: 263493
+[2022-11-13 23:06:20,067 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:06:20,068 INFO] Validation perplexity: 1.09131
+[2022-11-13 23:06:20,068 INFO] Validation accuracy: 99.3056
+[2022-11-13 23:06:36,755 INFO] Step 13420/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  109/ 141/20; 1566/2014 tok/s;    950 sec;
+[2022-11-13 23:06:37,124 INFO] Train perplexity: 1.04902
+[2022-11-13 23:06:37,124 INFO] Train accuracy: 98.8101
+[2022-11-13 23:06:37,124 INFO] Sentences processed: 268373
+[2022-11-13 23:06:37,124 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:06:37,125 INFO] Validation perplexity: 1.08696
+[2022-11-13 23:06:37,125 INFO] Validation accuracy: 99.1667
+[2022-11-13 23:06:54,216 INFO] Step 13664/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  119/ 151/20; 1656/2109 tok/s;    968 sec;
+[2022-11-13 23:06:54,587 INFO] Train perplexity: 1.04819
+[2022-11-13 23:06:54,587 INFO] Train accuracy: 98.8311
+[2022-11-13 23:06:54,587 INFO] Sentences processed: 273253
+[2022-11-13 23:06:54,588 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:06:54,588 INFO] Validation perplexity: 1.08207
+[2022-11-13 23:06:54,588 INFO] Validation accuracy: 99.3056
+[2022-11-13 23:07:11,957 INFO] Step 13908/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  116/ 150/20; 1600/2060 tok/s;    986 sec;
+[2022-11-13 23:07:12,287 INFO] Train perplexity: 1.0475
+[2022-11-13 23:07:12,287 INFO] Train accuracy: 98.8501
+[2022-11-13 23:07:12,288 INFO] Sentences processed: 278133
+[2022-11-13 23:07:12,288 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:07:12,289 INFO] Validation perplexity: 1.08209
+[2022-11-13 23:07:12,289 INFO] Validation accuracy: 99.2361
+[2022-11-13 23:07:29,291 INFO] Step 14152/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  116/ 148/20; 1634/2079 tok/s;   1003 sec;
+[2022-11-13 23:07:29,618 INFO] Train perplexity: 1.0467
+[2022-11-13 23:07:29,619 INFO] Train accuracy: 98.869
+[2022-11-13 23:07:29,619 INFO] Sentences processed: 283013
+[2022-11-13 23:07:29,619 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:07:29,619 INFO] Validation perplexity: 1.08593
+[2022-11-13 23:07:29,619 INFO] Validation accuracy: 99.2361
+[2022-11-13 23:07:46,517 INFO] Step 14396/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  113/ 146/20; 1600/2068 tok/s;   1020 sec;
+[2022-11-13 23:07:46,856 INFO] Train perplexity: 1.04593
+[2022-11-13 23:07:46,857 INFO] Train accuracy: 98.8873
+[2022-11-13 23:07:46,857 INFO] Sentences processed: 287893
+[2022-11-13 23:07:46,857 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:07:46,858 INFO] Validation perplexity: 1.08347
+[2022-11-13 23:07:46,858 INFO] Validation accuracy: 99.1667
+[2022-11-13 23:08:03,660 INFO] Step 14640/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  115/ 147/20; 1634/2093 tok/s;   1037 sec;
+[2022-11-13 23:08:03,983 INFO] Train perplexity: 1.04517
+[2022-11-13 23:08:03,983 INFO] Train accuracy: 98.9055
+[2022-11-13 23:08:03,983 INFO] Sentences processed: 292773
+[2022-11-13 23:08:03,983 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:08:03,984 INFO] Validation perplexity: 1.10075
+[2022-11-13 23:08:03,984 INFO] Validation accuracy: 99.2361
+[2022-11-13 23:08:20,571 INFO] Step 14884/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  110/ 141/20; 1583/2041 tok/s;   1054 sec;
+[2022-11-13 23:08:20,925 INFO] Train perplexity: 1.04448
+[2022-11-13 23:08:20,925 INFO] Train accuracy: 98.9222
+[2022-11-13 23:08:20,925 INFO] Sentences processed: 297653
+[2022-11-13 23:08:20,925 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:08:20,926 INFO] Validation perplexity: 1.08771
+[2022-11-13 23:08:20,926 INFO] Validation accuracy: 99.2361
+[2022-11-13 23:08:38,048 INFO] Step 15128/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  115/ 146/20; 1602/2040 tok/s;   1072 sec;
+[2022-11-13 23:08:38,379 INFO] Train perplexity: 1.04378
+[2022-11-13 23:08:38,379 INFO] Train accuracy: 98.9388
+[2022-11-13 23:08:38,380 INFO] Sentences processed: 302533
+[2022-11-13 23:08:38,380 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:08:38,380 INFO] Validation perplexity: 1.09393
+[2022-11-13 23:08:38,381 INFO] Validation accuracy: 99.375
+[2022-11-13 23:08:55,220 INFO] Step 15372/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  112/ 144/20; 1586/2052 tok/s;   1089 sec;
+[2022-11-13 23:08:55,574 INFO] Train perplexity: 1.04312
+[2022-11-13 23:08:55,575 INFO] Train accuracy: 98.9548
+[2022-11-13 23:08:55,575 INFO] Sentences processed: 307413
+[2022-11-13 23:08:55,575 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:08:55,575 INFO] Validation perplexity: 1.08768
+[2022-11-13 23:08:55,576 INFO] Validation accuracy: 99.4444
+[2022-11-13 23:09:12,500 INFO] Step 15616/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  116/ 149/20; 1644/2102 tok/s;   1106 sec;
+[2022-11-13 23:09:12,884 INFO] Train perplexity: 1.04244
+[2022-11-13 23:09:12,885 INFO] Train accuracy: 98.9708
+[2022-11-13 23:09:12,885 INFO] Sentences processed: 312293
+[2022-11-13 23:09:12,885 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:09:12,886 INFO] Validation perplexity: 1.08612
+[2022-11-13 23:09:12,886 INFO] Validation accuracy: 99.5139
+[2022-11-13 23:09:30,061 INFO] Step 15860/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  121/ 153/20; 1685/2120 tok/s;   1124 sec;
+[2022-11-13 23:09:30,402 INFO] Train perplexity: 1.04176
+[2022-11-13 23:09:30,402 INFO] Train accuracy: 98.987
+[2022-11-13 23:09:30,402 INFO] Sentences processed: 317173
+[2022-11-13 23:09:30,402 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:09:30,403 INFO] Validation perplexity: 1.10179
+[2022-11-13 23:09:30,403 INFO] Validation accuracy: 99.1667
+[2022-11-13 23:09:47,549 INFO] Step 16104/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  118/ 152/20; 1653/2114 tok/s;   1141 sec;
+[2022-11-13 23:09:47,898 INFO] Train perplexity: 1.04112
+[2022-11-13 23:09:47,899 INFO] Train accuracy: 99.0025
+[2022-11-13 23:09:47,899 INFO] Sentences processed: 322053
+[2022-11-13 23:09:47,899 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:09:47,900 INFO] Validation perplexity: 1.09873
+[2022-11-13 23:09:47,900 INFO] Validation accuracy: 99.0972
+[2022-11-13 23:10:04,831 INFO] Step 16348/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  115/ 147/20; 1630/2072 tok/s;   1159 sec;
+[2022-11-13 23:10:05,171 INFO] Train perplexity: 1.04051
+[2022-11-13 23:10:05,172 INFO] Train accuracy: 99.0168
+[2022-11-13 23:10:05,172 INFO] Sentences processed: 326933
+[2022-11-13 23:10:05,172 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:10:05,173 INFO] Validation perplexity: 1.08748
+[2022-11-13 23:10:05,174 INFO] Validation accuracy: 99.4444
+[2022-11-13 23:10:19,108 INFO] Step 16592/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  114/ 146/20; 1943/2494 tok/s;   1173 sec;
+[2022-11-13 23:10:19,394 INFO] Train perplexity: 1.03993
+[2022-11-13 23:10:19,395 INFO] Train accuracy: 99.0309
+[2022-11-13 23:10:19,395 INFO] Sentences processed: 331813
+[2022-11-13 23:10:19,395 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:10:19,396 INFO] Validation perplexity: 1.11791
+[2022-11-13 23:10:19,396 INFO] Validation accuracy: 99.0278
+[2022-11-13 23:10:36,536 INFO] Step 16836/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  120/ 152/20; 1686/2124 tok/s;   1190 sec;
+[2022-11-13 23:10:36,804 INFO] Train perplexity: 1.03935
+[2022-11-13 23:10:36,805 INFO] Train accuracy: 99.0447
+[2022-11-13 23:10:36,805 INFO] Sentences processed: 336693
+[2022-11-13 23:10:36,805 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:10:36,805 INFO] Validation perplexity: 1.09501
+[2022-11-13 23:10:36,806 INFO] Validation accuracy: 99.4444
+[2022-11-13 23:10:53,709 INFO] Step 17080/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  115/ 146/20; 1628/2076 tok/s;   1207 sec;
+[2022-11-13 23:10:54,039 INFO] Train perplexity: 1.03882
+[2022-11-13 23:10:54,039 INFO] Train accuracy: 99.0574
+[2022-11-13 23:10:54,039 INFO] Sentences processed: 341573
+[2022-11-13 23:10:54,039 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:10:54,040 INFO] Validation perplexity: 1.10234
+[2022-11-13 23:10:54,041 INFO] Validation accuracy: 99.1667
+[2022-11-13 23:11:11,047 INFO] Step 17324/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  120/ 151/20; 1686/2124 tok/s;   1225 sec;
+[2022-11-13 23:11:11,387 INFO] Train perplexity: 1.03827
+[2022-11-13 23:11:11,387 INFO] Train accuracy: 99.0705
+[2022-11-13 23:11:11,387 INFO] Sentences processed: 346453
+[2022-11-13 23:11:11,388 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:11:11,388 INFO] Validation perplexity: 1.10373
+[2022-11-13 23:11:11,389 INFO] Validation accuracy: 99.3056
+[2022-11-13 23:11:28,378 INFO] Step 17568/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  112/ 146/20; 1572/2054 tok/s;   1242 sec;
+[2022-11-13 23:11:28,710 INFO] Train perplexity: 1.03774
+[2022-11-13 23:11:28,710 INFO] Train accuracy: 99.083
+[2022-11-13 23:11:28,710 INFO] Sentences processed: 351333
+[2022-11-13 23:11:28,710 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:11:28,711 INFO] Validation perplexity: 1.09503
+[2022-11-13 23:11:28,712 INFO] Validation accuracy: 99.4444
+[2022-11-13 23:11:46,071 INFO] Step 17812/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  117/ 149/20; 1612/2058 tok/s;   1260 sec;
+[2022-11-13 23:11:46,446 INFO] Train perplexity: 1.03724
+[2022-11-13 23:11:46,447 INFO] Train accuracy: 99.0951
+[2022-11-13 23:11:46,447 INFO] Sentences processed: 356213
+[2022-11-13 23:11:46,447 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:11:46,448 INFO] Validation perplexity: 1.11095
+[2022-11-13 23:11:46,448 INFO] Validation accuracy: 99.3056
+[2022-11-13 23:12:03,691 INFO] Step 18056/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  118/ 151/20; 1630/2092 tok/s;   1277 sec;
+[2022-11-13 23:12:04,058 INFO] Train perplexity: 1.03673
+[2022-11-13 23:12:04,058 INFO] Train accuracy: 99.1073
+[2022-11-13 23:12:04,059 INFO] Sentences processed: 361093
+[2022-11-13 23:12:04,059 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:12:04,060 INFO] Validation perplexity: 1.10042
+[2022-11-13 23:12:04,060 INFO] Validation accuracy: 99.4444
+[2022-11-13 23:12:20,795 INFO] Step 18300/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  109/ 140/20; 1556/2001 tok/s;   1295 sec;
+[2022-11-13 23:12:21,176 INFO] Train perplexity: 1.03629
+[2022-11-13 23:12:21,176 INFO] Train accuracy: 99.1181
+[2022-11-13 23:12:21,177 INFO] Sentences processed: 365973
+[2022-11-13 23:12:21,177 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:12:21,177 INFO] Validation perplexity: 1.07863
+[2022-11-13 23:12:21,178 INFO] Validation accuracy: 99.375
+[2022-11-13 23:12:38,304 INFO] Step 18544/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  119/ 151/20; 1661/2099 tok/s;   1312 sec;
+[2022-11-13 23:12:38,653 INFO] Train perplexity: 1.03585
+[2022-11-13 23:12:38,653 INFO] Train accuracy: 99.1291
+[2022-11-13 23:12:38,653 INFO] Sentences processed: 370853
+[2022-11-13 23:12:38,653 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:12:38,654 INFO] Validation perplexity: 1.08726
+[2022-11-13 23:12:38,654 INFO] Validation accuracy: 99.375
+[2022-11-13 23:12:55,691 INFO] Step 18788/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  114/ 147/20; 1593/2058 tok/s;   1329 sec;
+[2022-11-13 23:12:56,032 INFO] Train perplexity: 1.0354
+[2022-11-13 23:12:56,033 INFO] Train accuracy: 99.14
+[2022-11-13 23:12:56,033 INFO] Sentences processed: 375733
+[2022-11-13 23:12:56,033 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:12:56,034 INFO] Validation perplexity: 1.10366
+[2022-11-13 23:12:56,034 INFO] Validation accuracy: 99.3056
+[2022-11-13 23:13:13,251 INFO] Step 19032/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  114/ 145/20; 1582/2020 tok/s;   1347 sec;
+[2022-11-13 23:13:13,574 INFO] Train perplexity: 1.03495
+[2022-11-13 23:13:13,574 INFO] Train accuracy: 99.1506
+[2022-11-13 23:13:13,575 INFO] Sentences processed: 380613
+[2022-11-13 23:13:13,575 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:13:13,576 INFO] Validation perplexity: 1.08456
+[2022-11-13 23:13:13,576 INFO] Validation accuracy: 99.5139
+[2022-11-13 23:13:30,642 INFO] Step 19276/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  115/ 147/20; 1615/2063 tok/s;   1364 sec;
+[2022-11-13 23:13:30,995 INFO] Train perplexity: 1.03452
+[2022-11-13 23:13:30,996 INFO] Train accuracy: 99.1612
+[2022-11-13 23:13:30,996 INFO] Sentences processed: 385493
+[2022-11-13 23:13:30,996 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:13:30,997 INFO] Validation perplexity: 1.09232
+[2022-11-13 23:13:30,997 INFO] Validation accuracy: 99.375
+[2022-11-13 23:13:47,741 INFO] Step 19520/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  116/ 147/20; 1662/2101 tok/s;   1381 sec;
+[2022-11-13 23:13:48,100 INFO] Train perplexity: 1.03408
+[2022-11-13 23:13:48,100 INFO] Train accuracy: 99.1715
+[2022-11-13 23:13:48,101 INFO] Sentences processed: 390373
+[2022-11-13 23:13:48,101 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:13:48,102 INFO] Validation perplexity: 1.08308
+[2022-11-13 23:13:48,102 INFO] Validation accuracy: 99.4444
+[2022-11-13 23:14:04,832 INFO] Step 19764/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  107/ 138/20; 1534/1970 tok/s;   1399 sec;
+[2022-11-13 23:14:05,180 INFO] Train perplexity: 1.03375
+[2022-11-13 23:14:05,180 INFO] Train accuracy: 99.1805
+[2022-11-13 23:14:05,181 INFO] Sentences processed: 395253
+[2022-11-13 23:14:05,181 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:14:05,182 INFO] Validation perplexity: 1.08802
+[2022-11-13 23:14:05,182 INFO] Validation accuracy: 99.4444
+[2022-11-13 23:14:22,187 INFO] Step 20008/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  114/ 145/20; 1601/2038 tok/s;   1416 sec;
+[2022-11-13 23:14:22,564 INFO] Train perplexity: 1.03335
+[2022-11-13 23:14:22,564 INFO] Train accuracy: 99.1899
+[2022-11-13 23:14:22,564 INFO] Sentences processed: 400133
+[2022-11-13 23:14:22,564 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:14:22,565 INFO] Validation perplexity: 1.07652
+[2022-11-13 23:14:22,565 INFO] Validation accuracy: 99.5833
+[2022-11-13 23:14:39,496 INFO] Step 20252/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  111/ 144/20; 1570/2026 tok/s;   1433 sec;
+[2022-11-13 23:14:39,881 INFO] Train perplexity: 1.03296
+[2022-11-13 23:14:39,881 INFO] Train accuracy: 99.1991
+[2022-11-13 23:14:39,881 INFO] Sentences processed: 405013
+[2022-11-13 23:14:39,881 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:14:39,882 INFO] Validation perplexity: 1.07915
+[2022-11-13 23:14:39,882 INFO] Validation accuracy: 99.5833
+[2022-11-13 23:14:56,998 INFO] Step 20496/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  116/ 149/20; 1618/2074 tok/s;   1451 sec;
+[2022-11-13 23:14:57,374 INFO] Train perplexity: 1.03258
+[2022-11-13 23:14:57,374 INFO] Train accuracy: 99.2083
+[2022-11-13 23:14:57,374 INFO] Sentences processed: 409893
+[2022-11-13 23:14:57,374 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:14:57,375 INFO] Validation perplexity: 1.07841
+[2022-11-13 23:14:57,375 INFO] Validation accuracy: 99.5833
+[2022-11-13 23:15:14,025 INFO] Step 20740/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  113/ 145/20; 1613/2085 tok/s;   1468 sec;
+[2022-11-13 23:15:14,389 INFO] Train perplexity: 1.0322
+[2022-11-13 23:15:14,389 INFO] Train accuracy: 99.2172
+[2022-11-13 23:15:14,389 INFO] Sentences processed: 414773
+[2022-11-13 23:15:14,390 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:15:14,390 INFO] Validation perplexity: 1.07866
+[2022-11-13 23:15:14,391 INFO] Validation accuracy: 99.5833
+[2022-11-13 23:15:30,909 INFO] Step 20984/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  116/ 146/20; 1675/2111 tok/s;   1485 sec;
+[2022-11-13 23:15:31,201 INFO] Train perplexity: 1.03184
+[2022-11-13 23:15:31,202 INFO] Train accuracy: 99.2259
+[2022-11-13 23:15:31,202 INFO] Sentences processed: 419653
+[2022-11-13 23:15:31,202 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:15:31,203 INFO] Validation perplexity: 1.08215
+[2022-11-13 23:15:31,203 INFO] Validation accuracy: 99.3056
+[2022-11-13 23:15:48,686 INFO] Step 21228/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  121/ 154/20; 1663/2120 tok/s;   1502 sec;
+[2022-11-13 23:15:49,039 INFO] Train perplexity: 1.03147
+[2022-11-13 23:15:49,039 INFO] Train accuracy: 99.235
+[2022-11-13 23:15:49,039 INFO] Sentences processed: 424533
+[2022-11-13 23:15:49,039 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:15:49,040 INFO] Validation perplexity: 1.08865
+[2022-11-13 23:15:49,040 INFO] Validation accuracy: 99.3056
+[2022-11-13 23:16:06,160 INFO] Step 21472/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  117/ 147/20; 1629/2050 tok/s;   1520 sec;
+[2022-11-13 23:16:06,508 INFO] Train perplexity: 1.03118
+[2022-11-13 23:16:06,509 INFO] Train accuracy: 99.2427
+[2022-11-13 23:16:06,509 INFO] Sentences processed: 429413
+[2022-11-13 23:16:06,509 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:16:06,509 INFO] Validation perplexity: 1.03605
+[2022-11-13 23:16:06,509 INFO] Validation accuracy: 99.5833
+[2022-11-13 23:16:23,086 INFO] Step 21716/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  114/ 146/20; 1641/2111 tok/s;   1537 sec;
+[2022-11-13 23:16:23,419 INFO] Train perplexity: 1.03084
+[2022-11-13 23:16:23,420 INFO] Train accuracy: 99.2507
+[2022-11-13 23:16:23,420 INFO] Sentences processed: 434293
+[2022-11-13 23:16:23,420 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:16:23,421 INFO] Validation perplexity: 1.04541
+[2022-11-13 23:16:23,421 INFO] Validation accuracy: 99.5139
+[2022-11-13 23:16:40,122 INFO] Step 21960/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  114/ 146/20; 1632/2088 tok/s;   1554 sec;
+[2022-11-13 23:16:40,426 INFO] Train perplexity: 1.03051
+[2022-11-13 23:16:40,427 INFO] Train accuracy: 99.2586
+[2022-11-13 23:16:40,427 INFO] Sentences processed: 439173
+[2022-11-13 23:16:40,427 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:16:40,427 INFO] Validation perplexity: 1.04653
+[2022-11-13 23:16:40,428 INFO] Validation accuracy: 99.2361
+[2022-11-13 23:16:57,484 INFO] Step 22204/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  114/ 147/20; 1598/2062 tok/s;   1571 sec;
+[2022-11-13 23:16:57,773 INFO] Train perplexity: 1.0302
+[2022-11-13 23:16:57,774 INFO] Train accuracy: 99.2663
+[2022-11-13 23:16:57,774 INFO] Sentences processed: 444053
+[2022-11-13 23:16:57,774 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:16:57,775 INFO] Validation perplexity: 1.03974
+[2022-11-13 23:16:57,775 INFO] Validation accuracy: 99.5833
+[2022-11-13 23:17:14,611 INFO] Step 22448/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  109/ 141/20; 1546/2006 tok/s;   1588 sec;
+[2022-11-13 23:17:14,954 INFO] Train perplexity: 1.0299
+[2022-11-13 23:17:14,955 INFO] Train accuracy: 99.2734
+[2022-11-13 23:17:14,955 INFO] Sentences processed: 448933
+[2022-11-13 23:17:14,955 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:17:14,956 INFO] Validation perplexity: 1.03877
+[2022-11-13 23:17:14,956 INFO] Validation accuracy: 99.5139
+[2022-11-13 23:17:32,265 INFO] Step 22692/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  118/ 153/20; 1631/2111 tok/s;   1606 sec;
+[2022-11-13 23:17:32,556 INFO] Train perplexity: 1.02958
+[2022-11-13 23:17:32,556 INFO] Train accuracy: 99.2812
+[2022-11-13 23:17:32,557 INFO] Sentences processed: 453813
+[2022-11-13 23:17:32,557 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:17:32,557 INFO] Validation perplexity: 1.04433
+[2022-11-13 23:17:32,558 INFO] Validation accuracy: 99.1667
+[2022-11-13 23:17:48,535 INFO] Step 22936/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  115/ 144/20; 1722/2165 tok/s;   1622 sec;
+[2022-11-13 23:17:48,842 INFO] Train perplexity: 1.0293
+[2022-11-13 23:17:48,843 INFO] Train accuracy: 99.2881
+[2022-11-13 23:17:48,843 INFO] Sentences processed: 458693
+[2022-11-13 23:17:48,843 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:17:48,844 INFO] Validation perplexity: 1.04321
+[2022-11-13 23:17:48,844 INFO] Validation accuracy: 99.375
+[2022-11-13 23:18:03,764 INFO] Step 23180/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  116/ 147/20; 1856/2357 tok/s;   1637 sec;
+[2022-11-13 23:18:04,076 INFO] Train perplexity: 1.029
+[2022-11-13 23:18:04,076 INFO] Train accuracy: 99.2953
+[2022-11-13 23:18:04,076 INFO] Sentences processed: 463573
+[2022-11-13 23:18:04,076 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:18:04,077 INFO] Validation perplexity: 1.03699
+[2022-11-13 23:18:04,077 INFO] Validation accuracy: 99.5833
+[2022-11-13 23:18:20,709 INFO] Step 23424/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  109/ 144/20; 1573/2067 tok/s;   1654 sec;
+[2022-11-13 23:18:21,059 INFO] Train perplexity: 1.02872
+[2022-11-13 23:18:21,060 INFO] Train accuracy: 99.3019
+[2022-11-13 23:18:21,060 INFO] Sentences processed: 468453
+[2022-11-13 23:18:21,060 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:18:21,061 INFO] Validation perplexity: 1.04749
+[2022-11-13 23:18:21,062 INFO] Validation accuracy: 99.4444
+[2022-11-13 23:18:38,235 INFO] Step 23668/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  120/ 152/20; 1670/2117 tok/s;   1672 sec;
+[2022-11-13 23:18:38,578 INFO] Train perplexity: 1.02842
+[2022-11-13 23:18:38,579 INFO] Train accuracy: 99.3093
+[2022-11-13 23:18:38,579 INFO] Sentences processed: 473333
+[2022-11-13 23:18:38,579 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:18:38,580 INFO] Validation perplexity: 1.04811
+[2022-11-13 23:18:38,580 INFO] Validation accuracy: 99.4444
+[2022-11-13 23:18:55,452 INFO] Step 23912/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  112/ 145/20; 1593/2061 tok/s;   1689 sec;
+[2022-11-13 23:18:55,822 INFO] Train perplexity: 1.02814
+[2022-11-13 23:18:55,822 INFO] Train accuracy: 99.3158
+[2022-11-13 23:18:55,823 INFO] Sentences processed: 478213
+[2022-11-13 23:18:55,823 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:18:55,823 INFO] Validation perplexity: 1.05507
+[2022-11-13 23:18:55,824 INFO] Validation accuracy: 99.1667
+[2022-11-13 23:19:12,773 INFO] Step 24156/24420; acc: 99.9; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  113/ 143/20; 1588/2021 tok/s;   1706 sec;
+[2022-11-13 23:19:13,146 INFO] Train perplexity: 1.02788
+[2022-11-13 23:19:13,147 INFO] Train accuracy: 99.3221
+[2022-11-13 23:19:13,147 INFO] Sentences processed: 483093
+[2022-11-13 23:19:13,147 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:19:13,148 INFO] Validation perplexity: 1.04002
+[2022-11-13 23:19:13,148 INFO] Validation accuracy: 99.375
+[2022-11-13 23:19:23,356 INFO] Weighted corpora loaded so far:
+			* corpus_1: 109
+[2022-11-13 23:19:23,370 INFO] Weighted corpora loaded so far:
+			* corpus_1: 110
+[2022-11-13 23:19:23,384 INFO] Weighted corpora loaded so far:
+			* corpus_1: 111
+[2022-11-13 23:19:23,397 INFO] Weighted corpora loaded so far:
+			* corpus_1: 112
+[2022-11-13 23:19:23,410 INFO] Weighted corpora loaded so far:
+			* corpus_1: 113
+[2022-11-13 23:19:23,424 INFO] Weighted corpora loaded so far:
+			* corpus_1: 114
+[2022-11-13 23:19:23,438 INFO] Weighted corpora loaded so far:
+			* corpus_1: 115
+[2022-11-13 23:19:24,527 INFO] Weighted corpora loaded so far:
+			* corpus_1: 116
+[2022-11-13 23:19:24,540 INFO] Weighted corpora loaded so far:
+			* corpus_1: 117
+[2022-11-13 23:19:24,552 INFO] Weighted corpora loaded so far:
+			* corpus_1: 118
+[2022-11-13 23:19:24,564 INFO] Weighted corpora loaded so far:
+			* corpus_1: 119
+[2022-11-13 23:19:24,576 INFO] Weighted corpora loaded so far:
+			* corpus_1: 120
+[2022-11-13 23:19:24,589 INFO] Weighted corpora loaded so far:
+			* corpus_1: 121
+[2022-11-13 23:19:24,602 INFO] Weighted corpora loaded so far:
+			* corpus_1: 122
+[2022-11-13 23:19:24,614 INFO] Weighted corpora loaded so far:
+			* corpus_1: 123
+[2022-11-13 23:19:24,627 INFO] Weighted corpora loaded so far:
+			* corpus_1: 124
+[2022-11-13 23:19:24,640 INFO] Weighted corpora loaded so far:
+			* corpus_1: 125
+[2022-11-13 23:19:24,653 INFO] Weighted corpora loaded so far:
+			* corpus_1: 126
+[2022-11-13 23:19:24,665 INFO] Weighted corpora loaded so far:
+			* corpus_1: 127
+[2022-11-13 23:19:24,677 INFO] Weighted corpora loaded so far:
+			* corpus_1: 128
+[2022-11-13 23:19:24,689 INFO] Weighted corpora loaded so far:
+			* corpus_1: 129
+[2022-11-13 23:19:24,701 INFO] Weighted corpora loaded so far:
+			* corpus_1: 130
+[2022-11-13 23:19:24,712 INFO] Weighted corpora loaded so far:
+			* corpus_1: 131
+[2022-11-13 23:19:24,723 INFO] Weighted corpora loaded so far:
+			* corpus_1: 132
+[2022-11-13 23:19:24,734 INFO] Weighted corpora loaded so far:
+			* corpus_1: 133
+[2022-11-13 23:19:24,745 INFO] Weighted corpora loaded so far:
+			* corpus_1: 134
+[2022-11-13 23:19:24,757 INFO] Weighted corpora loaded so far:
+			* corpus_1: 135
+[2022-11-13 23:19:24,767 INFO] Weighted corpora loaded so far:
+			* corpus_1: 136
+[2022-11-13 23:19:24,778 INFO] Weighted corpora loaded so far:
+			* corpus_1: 137
+[2022-11-13 23:19:24,788 INFO] Weighted corpora loaded so far:
+			* corpus_1: 138
+[2022-11-13 23:19:24,799 INFO] Weighted corpora loaded so far:
+			* corpus_1: 139
+[2022-11-13 23:19:24,810 INFO] Weighted corpora loaded so far:
+			* corpus_1: 140
+[2022-11-13 23:19:24,820 INFO] Weighted corpora loaded so far:
+			* corpus_1: 141
+[2022-11-13 23:19:24,831 INFO] Weighted corpora loaded so far:
+			* corpus_1: 142
+[2022-11-13 23:19:24,842 INFO] Weighted corpora loaded so far:
+			* corpus_1: 143
+[2022-11-13 23:19:24,853 INFO] Weighted corpora loaded so far:
+			* corpus_1: 144
+[2022-11-13 23:19:24,864 INFO] Weighted corpora loaded so far:
+			* corpus_1: 145
+[2022-11-13 23:19:24,874 INFO] Weighted corpora loaded so far:
+			* corpus_1: 146
+[2022-11-13 23:19:24,885 INFO] Weighted corpora loaded so far:
+			* corpus_1: 147
+[2022-11-13 23:19:24,896 INFO] Weighted corpora loaded so far:
+			* corpus_1: 148
+[2022-11-13 23:19:24,908 INFO] Weighted corpora loaded so far:
+			* corpus_1: 149
+[2022-11-13 23:19:24,918 INFO] Weighted corpora loaded so far:
+			* corpus_1: 150
+[2022-11-13 23:19:26,226 INFO] Weighted corpora loaded so far:
+			* corpus_1: 151
+[2022-11-13 23:19:26,237 INFO] Weighted corpora loaded so far:
+			* corpus_1: 152
+[2022-11-13 23:19:26,248 INFO] Weighted corpora loaded so far:
+			* corpus_1: 153
+[2022-11-13 23:19:26,259 INFO] Weighted corpora loaded so far:
+			* corpus_1: 154
+[2022-11-13 23:19:26,270 INFO] Weighted corpora loaded so far:
+			* corpus_1: 155
+[2022-11-13 23:19:26,281 INFO] Weighted corpora loaded so far:
+			* corpus_1: 156
+[2022-11-13 23:19:26,292 INFO] Weighted corpora loaded so far:
+			* corpus_1: 157
+[2022-11-13 23:19:26,303 INFO] Weighted corpora loaded so far:
+			* corpus_1: 158
+[2022-11-13 23:19:26,314 INFO] Weighted corpora loaded so far:
+			* corpus_1: 159
+[2022-11-13 23:19:26,325 INFO] Weighted corpora loaded so far:
+			* corpus_1: 160
+[2022-11-13 23:19:26,336 INFO] Weighted corpora loaded so far:
+			* corpus_1: 161
+[2022-11-13 23:19:26,346 INFO] Weighted corpora loaded so far:
+			* corpus_1: 162
+[2022-11-13 23:19:26,357 INFO] Weighted corpora loaded so far:
+			* corpus_1: 163
+[2022-11-13 23:19:26,369 INFO] Weighted corpora loaded so far:
+			* corpus_1: 164
+[2022-11-13 23:19:26,379 INFO] Weighted corpora loaded so far:
+			* corpus_1: 165
+[2022-11-13 23:19:26,390 INFO] Weighted corpora loaded so far:
+			* corpus_1: 166
+[2022-11-13 23:19:26,401 INFO] Weighted corpora loaded so far:
+			* corpus_1: 167
+[2022-11-13 23:19:26,412 INFO] Weighted corpora loaded so far:
+			* corpus_1: 168
+[2022-11-13 23:19:26,423 INFO] Weighted corpora loaded so far:
+			* corpus_1: 169
+[2022-11-13 23:19:26,434 INFO] Weighted corpora loaded so far:
+			* corpus_1: 170
+[2022-11-13 23:19:26,445 INFO] Weighted corpora loaded so far:
+			* corpus_1: 171
+[2022-11-13 23:19:26,457 INFO] Weighted corpora loaded so far:
+			* corpus_1: 172
+[2022-11-13 23:19:26,467 INFO] Weighted corpora loaded so far:
+			* corpus_1: 173
+[2022-11-13 23:19:26,478 INFO] Weighted corpora loaded so far:
+			* corpus_1: 174
+[2022-11-13 23:19:26,489 INFO] Weighted corpora loaded so far:
+			* corpus_1: 175
+[2022-11-13 23:19:26,500 INFO] Weighted corpora loaded so far:
+			* corpus_1: 176
+[2022-11-13 23:19:26,511 INFO] Weighted corpora loaded so far:
+			* corpus_1: 177
+[2022-11-13 23:19:26,522 INFO] Weighted corpora loaded so far:
+			* corpus_1: 178
+[2022-11-13 23:19:26,533 INFO] Weighted corpora loaded so far:
+			* corpus_1: 179
+[2022-11-13 23:19:26,544 INFO] Weighted corpora loaded so far:
+			* corpus_1: 180
+[2022-11-13 23:19:26,555 INFO] Weighted corpora loaded so far:
+			* corpus_1: 181
+[2022-11-13 23:19:26,566 INFO] Weighted corpora loaded so far:
+			* corpus_1: 182
+[2022-11-13 23:19:26,577 INFO] Weighted corpora loaded so far:
+			* corpus_1: 183
+[2022-11-13 23:19:26,587 INFO] Weighted corpora loaded so far:
+			* corpus_1: 184
+[2022-11-13 23:19:26,598 INFO] Weighted corpora loaded so far:
+			* corpus_1: 185
+[2022-11-13 23:19:26,609 INFO] Weighted corpora loaded so far:
+			* corpus_1: 186
+[2022-11-13 23:19:26,620 INFO] Weighted corpora loaded so far:
+			* corpus_1: 187
+[2022-11-13 23:19:26,631 INFO] Weighted corpora loaded so far:
+			* corpus_1: 188
+[2022-11-13 23:19:26,642 INFO] Weighted corpora loaded so far:
+			* corpus_1: 189
+[2022-11-13 23:19:26,653 INFO] Weighted corpora loaded so far:
+			* corpus_1: 190
+[2022-11-13 23:19:26,664 INFO] Weighted corpora loaded so far:
+			* corpus_1: 191
+[2022-11-13 23:19:26,674 INFO] Weighted corpora loaded so far:
+			* corpus_1: 192
+[2022-11-13 23:19:26,685 INFO] Weighted corpora loaded so far:
+			* corpus_1: 193
+[2022-11-13 23:19:26,696 INFO] Weighted corpora loaded so far:
+			* corpus_1: 194
+[2022-11-13 23:19:26,708 INFO] Weighted corpora loaded so far:
+			* corpus_1: 195
+[2022-11-13 23:19:28,196 INFO] Weighted corpora loaded so far:
+			* corpus_1: 196
+[2022-11-13 23:19:28,208 INFO] Weighted corpora loaded so far:
+			* corpus_1: 197
+[2022-11-13 23:19:28,219 INFO] Weighted corpora loaded so far:
+			* corpus_1: 198
+[2022-11-13 23:19:28,229 INFO] Weighted corpora loaded so far:
+			* corpus_1: 199
+[2022-11-13 23:19:28,240 INFO] Weighted corpora loaded so far:
+			* corpus_1: 200
+[2022-11-13 23:19:28,251 INFO] Weighted corpora loaded so far:
+			* corpus_1: 201
+[2022-11-13 23:19:28,262 INFO] Weighted corpora loaded so far:
+			* corpus_1: 202
+[2022-11-13 23:19:28,273 INFO] Weighted corpora loaded so far:
+			* corpus_1: 203
+[2022-11-13 23:19:28,284 INFO] Weighted corpora loaded so far:
+			* corpus_1: 204
+[2022-11-13 23:19:28,295 INFO] Weighted corpora loaded so far:
+			* corpus_1: 205
+[2022-11-13 23:19:28,306 INFO] Weighted corpora loaded so far:
+			* corpus_1: 206
+[2022-11-13 23:19:28,317 INFO] Weighted corpora loaded so far:
+			* corpus_1: 207
+[2022-11-13 23:19:28,328 INFO] Weighted corpora loaded so far:
+			* corpus_1: 208
+[2022-11-13 23:19:28,339 INFO] Weighted corpora loaded so far:
+			* corpus_1: 209
+[2022-11-13 23:19:28,349 INFO] Weighted corpora loaded so far:
+			* corpus_1: 210
+[2022-11-13 23:19:28,360 INFO] Weighted corpora loaded so far:
+			* corpus_1: 211
+[2022-11-13 23:19:28,371 INFO] Weighted corpora loaded so far:
+			* corpus_1: 212
+[2022-11-13 23:19:28,382 INFO] Weighted corpora loaded so far:
+			* corpus_1: 213
+[2022-11-13 23:19:28,393 INFO] Weighted corpora loaded so far:
+			* corpus_1: 214
+[2022-11-13 23:19:28,404 INFO] Weighted corpora loaded so far:
+			* corpus_1: 215
+[2022-11-13 23:19:30,129 INFO] Step 24400/24420; acc: 100.0; ppl:   1.0; xent: 0.0; lr: 1.00000; sents:    4880; bsz:  114/ 145/20; 1603/2041 tok/s;   1724 sec;
+[2022-11-13 23:19:30,500 INFO] Train perplexity: 1.02761
+[2022-11-13 23:19:30,501 INFO] Train accuracy: 99.3285
+[2022-11-13 23:19:30,501 INFO] Sentences processed: 487973
+[2022-11-13 23:19:30,502 INFO] Average bsz:  115/ 147/20
+[2022-11-13 23:19:30,503 INFO] Validation perplexity: 1.05648
+[2022-11-13 23:19:30,504 INFO] Validation accuracy: 99.0972
+[2022-11-13 23:19:33,793 INFO] Saving checkpoint data_english/run/phon/model_step_24420.pt
