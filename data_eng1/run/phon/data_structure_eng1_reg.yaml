@@ -1,6 +1,6 @@
 
 ## Where the samples will be written
-save_data_eng1: data_eng1/run/phon/example
+save_data: data_eng1/run/phon/example
 ## Where the vocab(s) will be written
 src_vocab: data_eng1/run/phon/example.vocab.src
 tgt_vocab: data_eng1/run/phon/example.vocab.tgt
