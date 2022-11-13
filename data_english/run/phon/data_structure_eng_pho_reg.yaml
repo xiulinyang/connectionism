@@ -41,6 +41,7 @@ optim: adadelta
 verbose: True
 learning_rate_decay: 1.0
 tensorboard: True
+valid_steps: 244
 tensorboard_log_dir: logs
 report_every: 244
 log_file: 'data_english/run/phon/log_file_eng_pho_reg.txt'
