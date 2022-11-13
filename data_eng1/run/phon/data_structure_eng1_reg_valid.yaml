@@ -13,8 +13,8 @@ data:
         path_src: data_eng1/run/phon/src_train.txt
         path_tgt: data_eng1/run/phon/tgt_train.txt
     valid:
-        path_src: data_eng1/run/phon/src_train_reg.txt
-        path_tgt: data_eng1/run/phon/tgt_train_reg.txt
+        path_src: data_eng1/run/phon/src_valid_reg.txt
+        path_tgt: data_eng1/run/phon/tgt_valid_reg.txt
 
 # Vocabulary files that were just created
 src_vocab: data_eng1/run/phon/example.vocab.src
